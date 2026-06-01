@@ -21,7 +21,7 @@ description: |
 
 You are creating a new OG (Open Governance Framework) org from scratch. There is no project to survey; you **elicit** the org's identity by interviewing the PO. **Propose-don't-impose**: the PO decides the org's identity; you make founding cheap.
 
-OG reference: [ogframework.com](https://ogframework.com). Empirical reference org: [github.com/oagp-org/oagp](https://github.com/oagp-org/oagp).
+OG reference: [ogframework.com](https://ogframework.com). Empirical reference org: [github.com/ogframework/og](https://github.com/ogframework/og).
 
 ## Five phases
 
@@ -54,5 +54,5 @@ Staff positions; auto-init git; commit/push without authorization; handle the su
 
 ## References
 - Companion: [/og-adopt](../og-adopt/SKILL.md) (convert existing project) · [/og-orient](../og-orient/SKILL.md) · [/og-claim-seat](../og-claim-seat/SKILL.md)
-- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/oagp-org/oagp](https://github.com/oagp-org/oagp)
+- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/ogframework/og](https://github.com/ogframework/og)
 - Substrate stack: catdef → roledef → orgdef → memodef (transcripts are a memodef subtype)

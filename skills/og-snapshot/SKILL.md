@@ -47,4 +47,4 @@ Modify any artifact; take a seat; summarize the entire history (only recent acti
 
 ## References
 - Companion: [/og-orient](../og-orient/SKILL.md) (emits this snapshot after a deeper read) · [/og-closeout](../og-closeout/SKILL.md)
-- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/oagp-org/oagp](https://github.com/oagp-org/oagp)
+- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/ogframework/og](https://github.com/ogframework/og)

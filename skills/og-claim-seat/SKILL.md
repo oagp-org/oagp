@@ -54,5 +54,5 @@ Seize a seat without PO authorization; commit/push the charter change; specializ
 
 ## References
 - Run first: [/og-orient](../og-orient/SKILL.md) · then [/og-closeout](../og-closeout/SKILL.md) at session end
-- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/oagp-org/oagp](https://github.com/oagp-org/oagp)
+- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/ogframework/og](https://github.com/ogframework/og)
 - Substrate: orgdef:Position (the seat) · roledef (role spec) · memodef:Memo (the staffing record)

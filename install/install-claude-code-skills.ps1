@@ -10,7 +10,7 @@
 # the junction tracks the working tree.
 #
 # Usage:
-#   git clone https://github.com/oagp-org/oagp.git
+#   git clone https://github.com/ogframework/og.git
 #   cd oagp-org
 #   .\install\install-claude-code-skills.ps1
 #

@@ -44,5 +44,5 @@ Save the transcript; auto-commit the memo; write retrospectives/marketing; staff
 
 ## References
 - Companion: [/og-orient](../og-orient/SKILL.md) (opens the session) · [/og-snapshot](../og-snapshot/SKILL.md)
-- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/oagp-org/oagp](https://github.com/oagp-org/oagp)
+- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/ogframework/og](https://github.com/ogframework/og)
 - Produces a `memodef:Memo`; prompts a `memodef:Transcript` save (transcripts are a memodef subtype).

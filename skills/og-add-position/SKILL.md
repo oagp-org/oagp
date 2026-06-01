@@ -47,5 +47,5 @@ Edit the charter without Director ratification; staff the new position (→ /og-
 
 ## References
 - Companion: [/og-claim-seat](../og-claim-seat/SKILL.md) (staff a position) · [/og-snapshot](../og-snapshot/SKILL.md) (see the chart)
-- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/oagp-org/oagp](https://github.com/oagp-org/oagp)
+- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/ogframework/og](https://github.com/ogframework/og)
 - Substrate: orgdef:Position · roledef (role spec + recommended_capabilities)

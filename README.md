@@ -65,15 +65,15 @@ To make the seven `og-` skills discoverable in Claude Code on a new machine:
 
 **Windows (PowerShell):**
 ```powershell
-git clone https://github.com/oagp-org/oagp.git
-cd oagp
+git clone https://github.com/ogframework/og.git
+cd og
 .\install\install-claude-code-skills.ps1
 ```
 
 **macOS / Linux (Bash):**
 ```bash
-git clone https://github.com/oagp-org/oagp.git
-cd oagp
+git clone https://github.com/ogframework/og.git
+cd og
 ./install/install-claude-code-skills.sh
 ```
 
