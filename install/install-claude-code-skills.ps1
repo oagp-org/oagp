@@ -1,9 +1,10 @@
 # install-claude-code-skills.ps1
 #
-# Installs the canonical OAGP skills (/oagp-bootstrap, /oagp-init,
-# /oagp-onboard, /oagp-closeout) into the current user's Claude Code
+# Installs the canonical OG (Open Governance Framework) skills
+# (/og-adopt, /og-create, /og-orient, /og-claim-seat, /og-closeout,
+# /og-snapshot, /og-add-position) into the current user's Claude Code
 # skills directory via Windows filesystem junctions pointing at this
-# clone of oagp-org.
+# clone of the OG repo.
 #
 # After install, `git pull` in this repo keeps your skills current --
 # the junction tracks the working tree.
@@ -28,7 +29,7 @@ if (-not (Test-Path $skillsSource)) {
 
 New-Item -ItemType Directory -Force -Path $skillsDest | Out-Null
 
-$skills = @("oagp-bootstrap", "oagp-init", "oagp-onboard", "oagp-closeout")
+$skills = @("og-adopt", "og-create", "og-orient", "og-claim-seat", "og-closeout", "og-snapshot", "og-add-position")
 foreach ($skill in $skills) {
     $src = Join-Path $skillsSource $skill
     $dst = Join-Path $skillsDest   $skill

@@ -2,9 +2,10 @@
 #
 # install-claude-code-skills.sh
 #
-# Installs the canonical OAGP skills (/oagp-bootstrap, /oagp-init,
-# /oagp-onboard, /oagp-closeout) into the current user's Claude Code
-# skills directory via symlinks pointing at this clone of oagp-org.
+# Installs the canonical OG (Open Governance Framework) skills
+# (/og-adopt, /og-create, /og-orient, /og-claim-seat, /og-closeout,
+# /og-snapshot, /og-add-position) into the current user's Claude Code
+# skills directory via symlinks pointing at this clone of the OG repo.
 #
 # After install, `git pull` in this repo keeps your skills current --
 # the symlink tracks the working tree.
@@ -30,7 +31,7 @@ fi
 
 mkdir -p "$skills_dest"
 
-skills=("oagp-bootstrap" "oagp-init" "oagp-onboard" "oagp-closeout")
+skills=("og-adopt" "og-create" "og-orient" "og-claim-seat" "og-closeout" "og-snapshot" "og-add-position")
 for skill in "${skills[@]}"; do
     src="$skills_source/$skill"
     dst="$skills_dest/$skill"
