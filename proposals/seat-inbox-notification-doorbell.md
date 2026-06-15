@@ -43,7 +43,7 @@ The live experiment validated channels as a *working* Claude Code transport, and
 
 1. **Vendor** — Anthropic-auth-only; excluded on Bedrock/Vertex/Foundry → canonical use would violate the **no-vendor-capture red line**.
 2. **Maturity** — research preview; flag/protocol contract may change.
-3. **Surface** — terminal-CLI sessions only, not the extension panel.
+3. **Surface** — any **flag-launched CLI session** (integrated terminal *or* a standalone / panel-docked Claude Code window); **not** the editor-tab extension chat (which has no flag-passing). *Live-corrected 2026-06-15: the original "terminal-CLI only, not the panel" overstated this — channel-capable ⟺ a flag-launched CLI process, regardless of where it's docked. See [memos/2026-06-15-1715](../memos/2026-06-15-1715--og-strategist--og-strategist--doorbell-surface-map-correction-and-cross-org-thingalog-validation.body.md).*
 4. **Adoption friction** — gated behind an org-admin `channelsEnabled` managed-settings policy for managed adopters.
 
 The vendor-neutral transports above carry none of these. Therefore: **channels is listed as one optional Claude-Code transport; the canonical doorbell is the transport-neutral semantic.**

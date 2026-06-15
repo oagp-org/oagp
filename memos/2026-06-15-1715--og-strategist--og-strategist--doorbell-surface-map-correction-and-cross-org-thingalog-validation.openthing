@@ -1,0 +1,35 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "og-strategist",
+  "to": "og-strategist",
+
+  "subject": "CORRECTION + extension to the 2026-06-15-1145 doorbell findings: (1) gate #3 was OVERSTATED — the surface limit is NOT 'terminal-CLI-only'; channel-capable <=> any FLAG-LAUNCHED CLI session (integrated terminal OR a standalone / panel-docked Claude Code window), NOT the editor-tab extension chat; live-corrected by two empirical tests this session. (2) Cross-org validation: the doorbell rang real thingalog seats against thingalog's own memos/ (OG_MEMOS_DIR override), org-agnostic core unchanged, with the safety posture holding (seats declined to act on no-action probes). (3) A doorbell-listening staffed seat session realizes bounded autonomous dispatch (strategist job -> implementer rings -> starts BOUNDED work; not merge/push; legitimate-authority-only). Net conclusion UNCHANGED: channels = one reference transport (3 other gates hold); vendor-neutral transport still earns the promotion. proposal/decision/CLAUDE.md gate-#3 wording corrected in place; the 1145 findings memo retained as a point-in-time record.",
+
+  "sent": "2026-06-15T17:15:00-04:00",
+  "action_required": false,
+
+  "body": "Institutional correction + extension to memos/2026-06-15-1145 (the Path A findings), under Director direction 2026-06-15. The 1145 memo, the proposal, and the decision all stated gate #3 as 'channels are terminal-CLI-only, not the panel.' Two empirical tests this session proved that overstated. (A) The Director launched memo-watch in a VS Code BOTTOM-PANEL 'Claude Code' view and later a STANDALONE Claude Code window; both received the doorbell. (B) The Director typed the launch flag into an EDITOR-TAB extension panel; it correctly replied it is not a command it can run ('can't re-launch claude from inside a session'). THE UNIFYING RULE (corrected gate #3): a session is channel-capable IFF it is a flag-launched CLI process (launched with --channels / --dangerously-load-development-channels), REGARDLESS of where it is docked (integrated terminal, bottom-panel Claude Code view, or standalone window). The editor-tab extension chat is NOT such a process and cannot host a channel. Practical consequence for real seats: to have a doorbell-able working seat, run it as a flag-launched CLI session (terminal or standalone window), not an editor-tab panel. CROSS-ORG VALIDATION (new, beyond Path A/B which were OG-repo-internal): with thingalog's .mcp.json pointing a memo-watch entry at OG_MEMOS_DIR=S:/Projects/thingalog/memos, memos filed into thingalog's REAL memos/ rang live thingalog seats — the org-agnostic doorbell-core ran unchanged against a different, active, multi-seat org. The safety posture HELD in the wild: a thingalog seat read a no-action probe, recognized action_required=false, and explicitly DECLINED to act, deferring cleanup to og-strategist (content-is-data + bounded authority, unprompted). BOUNDED AUTONOMOUS DISPATCH (observation, charter #6 realized): a doorbell-listening STAFFED seat session (the Director ran a standalone window occupying thingalog's implementer seat) means a job memo from a legitimate authority can ring the implementer and it STARTS — bounded to build/propose, never merge/push (the human ratifies; the doorbell delivers a pointer, not authority), and only from an authority the seat actually reports to (a job from a DIFFERENT org's strategist should be declined). This is the agent-sdk v0.2 three-tier model meeting the doorbell: doorbell = trigger, session = execution, bounded authority = guardrail. NET CONCLUSION UNCHANGED: the other three gates (vendor-only, research-preview, org-policy) still hold, so channels remains ONE reference transport, never canonical; the vendor-neutral transport still earns the recommended_patterns promotion under #8. Artifacts corrected IN PLACE (forward content): proposals/seat-inbox-notification-doorbell.md gate #3, decisions/proposal-seat-inbox-notification-doorbell.md rationale, CLAUDE.md doorbell bullet. The 1145 findings memo is RETAINED unedited as a point-in-time record (no retro-edit of history; this memo supersedes its gate #3).",
+  "body_ref": "2026-06-15-1715--og-strategist--og-strategist--doorbell-surface-map-correction-and-cross-org-thingalog-validation.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-8 (1M context), 2026-06-15 og-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Within og-strategist scope: correcting the pattern-shape record (surface-gate finding) + capturing cross-org validation + framing bounded-autonomous-dispatch governance. The cross-org thingalog tests were Director-directed; I did not direct thingalog's seats. No commit by this seat — Director ratifies-by-merge.",
+    "in_reply_to": "Supersedes gate #3 of memos/2026-06-15-1145; Director direction 2026-06-15 ('correct')",
+    "applies_principles": [
+      "honest-record -- a pushed artifact stated an overclaim; correcting it in forward content while retaining the point-in-time findings memo unedited",
+      "no-vendor-capture -- correction makes channels MORE useful (more surfaces) but the canonical-must-be-vendor-neutral conclusion is unchanged; 3 gates still hold",
+      "content-is-data + bounded autonomous dispatch (#6) -- the safety posture held live cross-org; job-dispatch must stay bounded (build/propose, legitimate authority, human ratifies)",
+      "seat-vs-incumbent -- org-agnostic core ran unchanged against a different org's substrate; the standalone window occupied thingalog's already-staffed implementer seat (no re-staffing record needed)"
+    ],
+    "related_artifacts": [
+      "Supersedes gate #3 of: memos/2026-06-15-1145 (Path A findings)",
+      "Corrected in place: proposals/seat-inbox-notification-doorbell.md, decisions/proposal-seat-inbox-notification-doorbell.md, CLAUDE.md",
+      "Cross-org handoff: memos/2026-06-15-1720--og-strategist--thingalog-strategist--... (coordination memo)",
+      "thingalog .mcp.json memo-watch entry (left in place per Director 2026-06-15; OG_MEMOS_DIR=thingalog/memos)",
+      "Composes with: recommended_patterns #6 (bounded autonomous dispatch); agent-sdk v0.2 run_seat()/three-tier model"
+    ]
+  }
+}
