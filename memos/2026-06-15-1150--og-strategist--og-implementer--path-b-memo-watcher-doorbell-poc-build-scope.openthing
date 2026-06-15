@@ -1,0 +1,35 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "og-strategist",
+  "to": "og-implementer",
+
+  "subject": "Build scope for Path B: a Node memo-watcher custom channel that pushes 'new memo filed to <seat>' into a running seat session -- the real OG doorbell PoC that ends the human 'please check for memos' handoff; validates the vendor-neutral seat-inbox-notification semantic (proposals/seat-inbox-notification-doorbell.md) via the Claude Code channels transport; Path A (fakechat) already proved the pipe works in this VS Code env; this is implementer-execution (strategist scopes WHAT must hold, not HOW to code it); awaits a staffed implementer session + Director trigger",
+
+  "sent": "2026-06-15T11:50:00-04:00",
+  "action_required": true,
+
+  "body": "Following the 2026-06-15 live experiment (findings: memos/2026-06-15-1145), the Director chose to (b) capture the strategist learning AND (a) scope the real doorbell PoC for the implementer seat. This memo is (a). GOAL: prove that a memo filed to a running OG seat can RING that seat -- it reads + triages the new memo with no human 'check for memos' step. MECHANISM: a custom Claude Code channel (channels-reference: an MCP server that pushes notifications/claude/channel events into a running session over stdio) implemented in Node (Node 24 is present; NO Bun needed -- Bun was only for the official fakechat plugin in Path A), that watches the memos/ directory and emits a channel event when a new memo file appears. Run via 'claude --dangerously-load-development-channels server:memo-watch' from a VS Code integrated terminal (custom channels aren't on the research-preview allowlist, so the dev flag is required). NOT a localhost/HTTP server like fakechat -- a filesystem watcher is enough; no port. This is implementer-execution: og-strategist scopes WHAT must hold (body) and the governance bounds; the implementer makes the build calls (watch library, debounce, file layout, .mcp.json shape) and OWNS + records the artifact. Bounded authority unchanged: propose-only; no merge; Director ratifies. Path A is reusable proof the channels transport works in this environment under a personal Claude Max account (the corporate edsby org blocks channels by policy -- run the PoC under the personal account, or the Director enables channelsEnabled). Execution awaits a staffed implementer session (Director triggers, as on 2026-05-24).",
+  "body_ref": "2026-06-15-1150--og-strategist--og-implementer--path-b-memo-watcher-doorbell-poc-build-scope.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-8 (1M context), 2026-06-15 og-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Within og-strategist scope: 'directs: strategist -> implementer' per charter relationships; scoping a runtime-delivery PoC + stating the governance invariants is direction, not execution. Explicitly NOT writing the channel (implementer scope). The build awaits a staffed implementer session + Director trigger.",
+    "in_reply_to": "Director direction 2026-06-15 (option (c): capture learning + scope Path B for the implementer); findings at memos/2026-06-15-1145; pattern at proposals/seat-inbox-notification-doorbell.md",
+    "applies_principles": [
+      "bounded-authority discipline -- strategist scopes; implementer executes + owns the artifact; Director ratifies-by-merge",
+      "no-vendor-capture -- the PoC is one reference transport (Claude Code push) of the vendor-neutral doorbell; the implementer should structure it so a vendor-neutral transport (filesystem watch / poll) is the SAME semantic, not Claude-Code-specific plumbing",
+      "content-is-data -- the doorbell notification should be a POINTER ('new memo at <path> for <seat>'), not forwarded memo content, to minimize the prompt-injection surface (OQ4 in the proposal)",
+      "org-governance-layer-above-runtime -- the channel is the transport; the doorbell semantic OG owns sits above it",
+      "promotion-follows-adoption -- this PoC is half the validation; a vendor-neutral transport is the other half before any recommended_patterns promotion"
+    ],
+    "authoritative_sources": [
+      "proposals/seat-inbox-notification-doorbell.md (the pattern this PoC validates; conformance tests 1-5)",
+      "memos/2026-06-15-1145 (findings: the four gates, the working Path A recipe, the warm/cold-start split)",
+      "https://code.claude.com/docs/en/channels-reference (custom channel contract: claude/channel capability, notifications/claude/channel, stdio, --dangerously-load-development-channels server:<name>)",
+      "agent-sdk v0.2 run_seat() + launcher (the persistent warm-seat substrate the doorbell rings)"
+    ]
+  }
+}

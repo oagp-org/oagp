@@ -1,0 +1,36 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "og-strategist",
+  "to": "og-strategist",
+
+  "subject": "Findings: live experiment validating Claude Code 'channels' (code.claude.com/docs/en/channels) as a candidate transport for the inter-seat handoff doorbell (Director's 'this needs a please-check-for-memos human command' friction); Path A smoke test ENABLED + REGISTERED + inbound-delivered via fakechat in this VS Code environment under a personal Claude Max account; records the working recipe + every gotcha (org-policy gate, Bun-on-PATH, terminal-CLI-not-panel) and the FOUR independent gates that make channels a reference transport only, never OG's canonical doorbell; feeds proposals/seat-inbox-notification-doorbell.md + the Path B implementer scope memo",
+
+  "sent": "2026-06-15T11:45:00-04:00",
+  "action_required": false,
+
+  "body": "Institutional capture of a live experiment run this session under Director direction (2026-06-15). The Director surfaced a real OG operating friction: the handoff between warm-standby seats currently needs a human 'please check for memos' command — the substrate is the mailbox, but there is no doorbell. They asked whether Claude Code 'channels' (an MCP server that pushes events into a RUNNING session) could solve it. Decomposition: the handoff has two halves — COLD-START (the receiving seat's session does not exist yet; channels cannot wake it) and WARM/DOORBELL (the seat IS running; a new memo lands and the incumbent doesn't know). The Director runs seats in warm standby, so the warm/doorbell half is exactly their situation, and channels is a genuine fit for it. We then ran Path A (a throwaway proof-of-pipe with the official fakechat plugin) end-to-end in this VS Code environment and it WORKED: channel registered, fakechat server spawned, and an inbound browser message delivered into the session as a channel event. Along the way we mapped every gate. NET STRATEGIST DISPOSITION (unchanged by success, in fact reinforced): channels is ONE platform-specific reference transport for the Claude Code runtime, bounded by the no-vendor-capture red line — it is NOT and cannot be OG's canonical doorbell, for four independent reasons recorded in the body. The canonical thing is the vendor-neutral seat-inbox-notification semantic (proposal filed). The real OG doorbell PoC (Path B: a memo-watcher custom channel) is scoped to the implementer seat in a separate memo. Bounded authority: this is a findings record + a drafted proposal; nothing committed/pushed; the Director ratifies-by-merge.",
+  "body_ref": "2026-06-15-1145--og-strategist--og-strategist--channels-path-a-validated-doorbell-transport-findings.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-8 (1M context), 2026-06-15 og-strategist chair (s:/projects/oagp-org local dir; remote github.com/ogframework/og); session entered via /og-claim-seat -> redirected to orient+operate on the already-staffed seat",
+    "scope_check": "Within og-strategist scope: adoption-cycle architecture + cross-runtime delivery prioritization are pattern-shape strategist calls. The finding (transport-neutral doorbell semantic; channels as one bounded reference transport) is pattern-shape. The Path B build is implementer-execution and is routed there, not taken here. No charter edit, no commit — findings capture + drafted proposal awaiting Director ratification.",
+    "in_reply_to": "Director direction 2026-06-15 ('the handoff between seats needs a please-check-for-memos human command; could we use channels to solve that'); live experiment across the same session.",
+    "applies_principles": [
+      "seat-vs-incumbent persistence -- the doorbell problem only exists BECAUSE coordination is async via memos to seats; the finding strengthens the pattern by naming its missing trigger layer",
+      "no-vendor-capture (red line) -- channels is Anthropic-auth-only; it can be a reference transport but framing it as THE canonical doorbell would be a red-line violation",
+      "org-governance-layer-above-runtime -- the doorbell is a cross-session governance affordance OG composes OVER runtime transports (channels, hooks, poll, MCP inbox); OG names the semantic, runtimes provide transports",
+      "promotion-follows-adoption -- channels is research-preview with a changing flag contract; validate (Path B + a vendor-neutral transport) before any canonical promotion",
+      "bounded-authority discipline -- strategist drafts the pattern + proposal; implementer builds the PoC; Director ratifies-by-merge"
+    ],
+    "related_artifacts": [
+      "proposals/seat-inbox-notification-doorbell.md (the vendor-neutral pattern this findings memo motivates)",
+      "memos/2026-06-15-1150--og-strategist--og-implementer--path-b-memo-watcher-doorbell-poc-build-scope.{openthing,body.md} (the implementer-scope Path B build)",
+      "https://code.claude.com/docs/en/channels + https://code.claude.com/docs/en/channels-reference (the feature, verified this session)",
+      "charter recommended_patterns.general #2 (seat-vs-incumbent), #7 (org-governance-layer-above-runtime), #8 (promotion-follows-adoption); red_lines (no-vendor-capture)",
+      "agent-sdk v0.2 run_seat() + launcher (decisions/proposal-agent-sdk-v0.2-amendment-... + ...-governance-addendum-...) -- the persistent-seat substrate a doorbell sits above"
+    ]
+  }
+}
