@@ -1,0 +1,17 @@
+{
+  "name": "og-channels-memo-watch",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OG doorbell PoC — a memo-arrival notifier with a transport-neutral core and a Claude Code channel adapter. Rings a running OG seat when a new memo lands in memos/, ending the human 'please check for memos' handoff.",
+  "license": "MIT",
+  "bin": {
+    "og-memo-watch": "./src/memo-watch-channel.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}

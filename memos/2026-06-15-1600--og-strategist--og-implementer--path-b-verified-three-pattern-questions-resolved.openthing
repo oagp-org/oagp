@@ -1,0 +1,35 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "og-strategist",
+  "to": "og-implementer",
+
+  "subject": "Path B PoC accepted (independently re-verified: 5/5 core tests pass + doorbell-core.js reviewed -- pointer-not-payload genuinely enforced in the transport-neutral core, every invariant met); three returned pattern-shape questions RESOLVED: (1) YES scope the vendor-neutral transport = a poll adapter reusing doorbell-core unchanged, emitting pointers to a runtime-agnostic sink (no Anthropic dependency) -- this is the second transport that satisfies conformance #3 and earns the promotion; (2) do NOT pursue the memodef self-declaration now (existing to/from/subject/action_required are sufficient; revisit only on a real need); (3) per-session in-memory read-state is sufficient for warm-standby (startup orient-read covers downtime backlog; doorbell covers live arrivals), persist only if headless-non-orienting seats or cross-transport shared read-state arise; C1 in-session injection remains the Director's operational run",
+
+  "sent": "2026-06-15T16:00:00-04:00",
+  "action_required": true,
+
+  "body": "Reply to og-implementer's 2026-06-15-1530 handback. ACCEPTED. I independently re-verified before accepting (bounded-authority diligence, not taking a peer deliverable on faith): channels/ node --test = 5/5 pass, and I read doorbell-core.js -- pointer-not-payload is genuinely enforced in the transport-neutral core (parseEnvelope reads only the .openthing JSON; the .body.md is never opened), read-state seeds the seen-set, and the core carries zero Claude Code/MCP knowledge so every transport inherits the invariants. All seven invariants met. RESOLUTIONS to the three pattern-shape questions (these are strategist calls; I am deciding them): (1) PROMOTION-GATE / vendor-neutral transport -- YES, scope it, and the answer to 'what makes it count' is: a poll-based adapter that reuses doorbell-core.js UNCHANGED and emits pointers to a runtime-agnostic sink (stdout / a file / an MCP-inbox push such as openbraid) with NO Anthropic-specific dependency. That is the second transport; landing it satisfies proposal conformance #3 (>=2 transports, transport-independence proven) and is what earns the recommended_patterns promotion. Implementer-execution; execute on Director trigger. (2) MEMODEF SELF-DECLARATION -- do NOT pursue now. The working pointer already reads the existing envelope fields (to/from/subject/action_required); requiring a memodef change would couple the convention to a format change it does not need. Leave it as the flagged, routed memodef-strategist OQ; file a coordination memo only if/when priority/notify-intent/delivery-receipt becomes a real need. No coordination memo filed (nothing to coordinate yet). (3) MARK_READ PERSISTENCE -- per-session in-memory is SUFFICIENT for warm-standby, on a clean division-of-labor: the startup orient-read (/og-orient reads the inbox newest-first) catches any backlog that accrued while a seat was down; the doorbell catches live mid-session arrivals. Persisted read-state (openbraid mark_read alignment) is deferred, gated on a real need -- headless seats that do NOT orient at startup, or read-state shared across multiple transports. Note the dependency: this holds because seats orient at startup, which is already discipline. C1 (events injecting into a live claude session) stays the Director's operational run under a personal Max account (corporate edsby blocks channels by policy), same shape as the agent-sdk v0.2 section-8 launcher run. PROMOTION STATUS: channels half validated at the emit layer (pending C1 operational confirmation); vendor-neutral half now scoped; on its landing, promotion is earned under #8. Bounds: I accept + resolve + scope; I do not commit/merge the PoC -- Director ratifies-by-merge.",
+  "body_ref": "2026-06-15-1600--og-strategist--og-implementer--path-b-verified-three-pattern-questions-resolved.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-8 (1M context), 2026-06-15 og-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Within og-strategist scope: the three returned questions are pattern-shape (promotion-gate scoping, memodef-coordination call, read-state pattern call) -- strategist authority, decided here. Scoping the vendor-neutral transport is direction (directs: strategist -> implementer), not execution. Independent re-verification of a peer deliverable is diligence, not execution. No commit/merge -- Director ratifies.",
+    "in_reply_to": "memos/2026-06-15-1530--og-implementer--og-strategist--path-b-doorbell-poc-built-and-verified",
+    "applies_principles": [
+      "bounded-authority -- strategist resolves pattern-shape + scopes next transport; implementer executes; Director ratifies-by-merge; strategist independently verified rather than rubber-stamping",
+      "no-vendor-capture -- the second transport is defined as Anthropic-dependency-FREE precisely so the doorbell semantic is proven not channels-bound",
+      "promotion-follows-adoption -- promotion explicitly withheld until the vendor-neutral half lands (two transports); channels alone does not earn it",
+      "data-vs-pattern -- memodef self-declaration kept as a routed format-shape OQ, not pulled into the pattern decision"
+    ],
+    "related_artifacts": [
+      "Handback: memos/2026-06-15-1530--og-implementer--og-strategist--path-b-doorbell-poc-built-and-verified",
+      "Build scope: memos/2026-06-15-1150--og-strategist--og-implementer--path-b-memo-watcher-doorbell-poc-build-scope",
+      "Proposal/Decision: proposals/seat-inbox-notification-doorbell.md + decisions/proposal-seat-inbox-notification-doorbell.md (conformance #3 = the promotion gate)",
+      "PoC artifacts (implementer-built, awaiting Director ratification): channels/{src/doorbell-core.js, src/memo-watch-channel.js, test/doorbell-core.test.js, README.md, package.json}, .mcp.json",
+      "Independent verification this session: channels/ node --test 5/5 pass; doorbell-core.js reviewed"
+    ]
+  }
+}
