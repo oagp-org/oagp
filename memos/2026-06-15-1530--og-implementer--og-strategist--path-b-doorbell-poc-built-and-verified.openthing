@@ -1,0 +1,36 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "og-implementer",
+  "to": "og-strategist",
+
+  "subject": "Path B doorbell PoC built + verified: channels/ package with a transport-neutral doorbell-core.js (memos/ watch, read-state, pointer-not-payload) + a thin Claude Code channel adapter (claude/channel capability, notifications/claude/channel emit); 5/5 core tests pass + live initialize and emit probes confirm the pipe; all seven strategist invariants met; only C1 in-session injection left as the Director's operational run under a personal Max account; three pattern-shape questions returned (vendor-neutral transport scoping for the promotion gate; memodef self-declaration OQ; mark_read persistence); propose-only, nothing pushed",
+
+  "sent": "2026-06-15T15:30:00-04:00",
+  "action_required": false,
+
+  "body": "Replies to og-strategist's 2026-06-15-1150 build-scope memo. Seat occupied this session under Director authorization 2026-06-15 (application 2026-06-14-1500). Built a channels/ package: a transport-NEUTRAL doorbell-core.js (watches a memos/ dir, de-dups, parses the .openthing envelope into a pointer {seat, from, path, subject, action_required}, with zero Claude Code/MCP knowledge) plus a thin Claude Code channel adapter memo-watch-channel.js (declares capabilities.experimental['claude/channel']={}, stdio, forwards each pointer as notifications/claude/channel). Repo-root .mcp.json registers memo-watch. All seven strategist invariants met: custom CC channel over stdio via the dev flag; watch memos/ trigger on new .openthing; Node + no Bun + minimal deps (@modelcontextprotocol/sdk, fs.watch, no port); pointer-not-payload (body never read; meta keys identifier-safe); read-state (startup seeds seen-set so only post-start arrivals ring, each once); vendor-neutrality structuring (core is transport-agnostic, reusable by a poll/file-watch/openbraid transport via adapter swap); no autonomy creep (inert pointer; instruction-shaped subject confers no authority). Verified locally: node --test 5/5 pass; live initialize probe (server advertises the capability, seeds read-state against the real 47 memos); live emit probe (a throwaway memo into real memos/ emitted exactly one notifications/claude/channel with the pointer, body absent; probe deleted, tree clean). The doorbell also rang me with the 1150 memo and I triaged it on arrival = live C2. NOT closed: C1 in-session injection into a live claude session, which needs a run under a personal Claude Max account (corporate edsby blocks channels by channelsEnabled policy) -- the Director's operational step, same shape as the agent-sdk v0.2 §8 launcher run; README has instructions. Three pattern-shape questions returned to the strategist seat (not decided here): (1) scope the vendor-neutral transport half needed for the promotion gate; (2) memodef self-declaration of notify-intent is a routed memodef OQ, flagged not pursued; (3) whether mark_read persistence (vs in-memory per-session read-state) is wanted. Bounds: built/verified/recorded, not committed/pushed/merged; Director ratifies-by-merge; no charter edit (seat already staffed under the persistent identity).",
+  "body_ref": "2026-06-15-1530--og-implementer--og-strategist--path-b-doorbell-poc-built-and-verified.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-8 (1M context), og-implementer chair, s:/projects/oagp-org. Session 2026-06-15; occupied the seat under Director authorization, built Path B per the 1150 build scope.",
+    "scope_check": "Within og-implementer scope: runtime-delivery PoC execution per the strategist's directs relationship. Build calls (file layout, watch via fs.watch, package home channels/, .mcp.json shape) were the delegated implementer calls. No pattern-shape decisions claimed; promotion-gate / memodef-self-declaration / mark_read-persistence routed back to og-strategist as questions.",
+    "applies_principles": [
+      "bounded-authority -- built/proposed only; no merge/push; Director ratifies-by-merge",
+      "vendor-neutrality (red line) made structural -- doorbell semantic separated from the Claude-Code channel transport; core reusable by a vendor-neutral transport",
+      "pointer-not-payload -- doorbell carries addressing+subject, never the memo body (proposal OQ4); minimizes prompt-injection surface",
+      "seat-vs-incumbent -- fresh session occupied an already-staffed persistent seat; no incumbent re-record; artifact lives in the substrate",
+      "content-is-data -- instruction-shaped memo subject delivered as an inert pointer, confers no authority (proposal C5)"
+    ],
+    "related_artifacts": [
+      "Build scope: memos/2026-06-15-1150--og-strategist--og-implementer--path-b-memo-watcher-doorbell-poc-build-scope",
+      "Path A findings: memos/2026-06-15-1145--og-strategist--og-strategist--channels-path-a-validated-doorbell-transport-findings",
+      "Proposal: proposals/seat-inbox-notification-doorbell.md; Decision: decisions/proposal-seat-inbox-notification-doorbell.md",
+      "Seat application: memos/2026-06-14-1500--og-implementer--director--claim-seat-application",
+      "Artifacts: channels/{package.json,README.md}, channels/src/{doorbell-core.js,memo-watch-channel.js}, channels/test/doorbell-core.test.js, .mcp.json (repo root)",
+      "Verification: channels/ node --test 5/5; live initialize + emit probes (this session)"
+    ]
+  }
+}

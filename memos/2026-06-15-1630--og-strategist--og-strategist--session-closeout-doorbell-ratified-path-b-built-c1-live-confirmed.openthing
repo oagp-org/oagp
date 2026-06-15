@@ -1,0 +1,35 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "og-strategist",
+  "to": "og-strategist",
+
+  "subject": "Session closeout 2026-06-15: seat-inbox-notification ('doorbell') chartered end-to-end -- the inter-seat handoff no longer needs a human 'check for memos'. Path A (Claude Code channels) validated live in VS Code; convention proposed + ratified (decision on main); Path B PoC (channels/ Node memo-watcher) built by og-implementer + strategist-re-verified + ratified; the three returned pattern-shape questions resolved (vendor-neutral transport scoped, memodef self-declaration deferred, per-session read-state sufficient); C1 in-session injection LIVE-CONFIRMED across two zero-shared-memory sessions; one open item = the vendor-neutral transport that earns the recommended_patterns promotion under #8",
+
+  "sent": "2026-06-15T16:30:00-04:00",
+  "action_required": false,
+
+  "body": "Closeout for the 2026-06-15 og-strategist session (entered via /og-claim-seat -> redirected to orient+operate on the already-staffed seat; the strategist seat is staffed, this session occupied it). Theme: a single Director-raised friction -- 'the handoff between seats needs a please-check-for-memos human command' -- carried from question to a working, ratified, live-demonstrated capability in one session. ON MAIN (ratified-by-merge under Director direction; commits 59c387c + 644b6ef, author og-strategist / committer Scott): (1) seat-inbox-notification doorbell convention -- proposals/seat-inbox-notification-doorbell.md + decisions/proposal-seat-inbox-notification-doorbell.md; transport-neutral semantic, Claude Code channels recorded as ONE reference transport bounded by four gates (vendor/research-preview/terminal-CLI-only/org-policy), promotion HELD under #8; no charter bump. (2) Path A findings -- memos/2026-06-15-1145 (channels enabled+working in VS Code integrated terminal under a personal Max account; the recipe + every gotcha). (3) Path B PoC -- channels/ package: transport-NEUTRAL doorbell-core.js (watches memos/, read-state, pointer-not-payload -- body never read) + thin Claude Code channel adapter + .mcp.json; built by og-implementer (memos/2026-06-15-1530), strategist-re-verified (5/5 tests + core reviewed), three returned pattern-shape questions resolved (memos/2026-06-15-1600: vendor-neutral transport = YES scope; memodef self-declaration = defer; mark_read persistence = per-session sufficient for warm-standby). C1 LIVE-CONFIRMED this session: a throwaway memo filed from this seat rang the og-implementer-side memo-watch session ('<- memo-watch: New memo filed to og-strategist...') which read + acted on it, with NO human 'check for memos'; pointer-not-payload held in the wild (addressing+path delivered, body never forwarded); and when the rung session proposed deleting the throwaway, the destructive op still hit the permission gate -- layered defense (content-is-data at the transport + bounded authority + permission gate at the action) demonstrated. Throwaway probe deleted; tree clean. OPEN / NEXT: (a) vendor-neutral transport (poll/file-watch reusing doorbell-core unchanged, runtime-agnostic sink, no Anthropic dependency) -- AUTHORIZED, queued for a staffed og-implementer session; landing it satisfies conformance #3 and EARNS the recommended_patterns.general promotion. (b) Director-side: ogframework.com publishing + folding channels/ into the OG distribution kit (parameterized by OG_MEMOS_DIR) + composing with run_seat()/launcher so a bound seat auto-gets its doorbell -- the 'use it in other orgs' roadmap (each step gated: validation / ratification / implementer-execution). (c) Pre-existing untracked items NOT swept by this session: implementer 1530 handback memo + seat-application 2026-06-14-1500 + prior closeouts (2026-05-29-2000, 2026-06-04-1400) remain untracked; .wrangler/ + two modified transcripts untouched. (d) Not pushed -- commits are local on main; push to ogframework/og is the Director's publish step. Bounded authority held throughout: strategist drafted/resolved/scoped + re-verified a peer deliverable; implementer built; Director ratified-by-merge; no seat merged or pushed.",
+  "body_ref": "2026-06-15-1630--og-strategist--og-strategist--session-closeout-doorbell-ratified-path-b-built-c1-live-confirmed.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-8 (1M context), 2026-06-15 og-strategist chair (s:/projects/oagp-org local dir; remote github.com/ogframework/og)",
+    "scope_check": "Within og-strategist scope: adoption-cycle architecture + cross-runtime delivery prioritization (pattern-shape) for the doorbell convention + the channels-as-reference-transport call + the three resolved pattern-shape questions; direction (not execution) for the Path B + vendor-neutral builds; independent re-verification of a peer deliverable as diligence. Charter-edit ratifications + the two commits were Director-authorized ('ratify' / '1 yes 2 yes'); committer is the Director. No push (Director's publish step).",
+    "in_reply_to": "Director session 2026-06-15 (the doorbell arc, channels experiment, ratifications, live C1 walkthrough)",
+    "applies_principles": [
+      "seat-vs-incumbent -- the session occupied an already-staffed seat; institutional memory (these artifacts + this closeout) lives in the substrate, not the session; C1 itself demonstrated two zero-shared-memory sessions coordinating through the substrate + doorbell",
+      "no-vendor-capture -- channels recorded as ONE reference transport; the canonical doorbell is the vendor-neutral semantic; promotion gated on a non-Anthropic transport",
+      "promotion-follows-adoption -- doorbell convention decided + channels transport validated, but recommended_patterns promotion withheld until the vendor-neutral transport lands (conformance #3)",
+      "bounded-authority -- strategist drafts/resolves/scopes + verifies; implementer builds; Director ratifies-by-merge; no seat pushed"
+    ],
+    "related_artifacts": [
+      "proposals/seat-inbox-notification-doorbell.md + decisions/proposal-seat-inbox-notification-doorbell.md",
+      "memos/2026-06-15-1145 (Path A findings), 2026-06-15-1150 (Path B scope), 2026-06-15-1530 (implementer handback), 2026-06-15-1600 (questions resolved)",
+      "channels/{src/doorbell-core.js, src/memo-watch-channel.js, test/doorbell-core.test.js, README.md, package.json, .gitignore}, .mcp.json",
+      "commits 59c387c (doorbell ratify) + 644b6ef (Path B ratify) on main; author og-strategist, committer scottconfusedgorilla",
+      "Composes with: agent-sdk v0.2 run_seat()/launcher; recommended_patterns #2/#7/#8; red_lines (no-vendor-capture)"
+    ]
+  }
+}
