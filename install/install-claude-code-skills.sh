@@ -12,7 +12,7 @@
 #
 # Usage:
 #   git clone https://github.com/ogframework/og.git
-#   cd oagp-org
+#   cd og
 #   ./install/install-claude-code-skills.sh
 #
 # Then restart Claude Code; the skills become discoverable.
@@ -25,7 +25,7 @@ skills_source="$repo_root/skills"
 skills_dest="$HOME/.claude/skills"
 
 if [ ! -d "$skills_source" ]; then
-    echo "Error: source skills directory not found at $skills_source -- are you running from inside an oagp-org clone?" >&2
+    echo "Error: source skills directory not found at $skills_source -- are you running from inside an og clone?" >&2
     exit 1
 fi
 

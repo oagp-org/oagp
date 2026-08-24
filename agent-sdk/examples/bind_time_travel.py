@@ -10,18 +10,38 @@ This example shows the canonical time-travel pattern:
   4. The agent's prompt names the worktree by absolute path, so cwd
      at dispatch time is irrelevant.
 
-Paths are placeholders; adapt to your environment.
+Paths resolve from OG_EXAMPLE_* environment variables, with in-repo
+defaults so the example runs from a fresh clone without editing.
 """
 
+import os
 from pathlib import Path
 
 from oagp_agent_sdk import bind
 
+# Path resolution follows the house pattern (see channels/src/memo-watch-channel.js):
+# an explicit environment override wins; otherwise fall back to a location derived
+# from this file, so the example runs from a fresh clone with no editing.
+#
+#   OG_EXAMPLE_WORKTREE  -- read-only checkout of the prior org state
+#   OG_EXAMPLE_PROJECT   -- project whose .claude/agents/ receives the subagent file
+#   OG_EXAMPLE_WORKSPACE -- writable directory for the engagement's findings
+#
+# The defaults point inside this repo so nothing outside it is touched; set the
+# environment variables to aim the example at a real target.
 
-# Adjust these for your environment:
-WORKTREE = Path("s:/scratch/thingalog-2026-05-16").resolve()
-PROJECT = Path("s:/projects/thingalog").resolve()
-WORKSPACE = Path("s:/scratch/oagp-agent-prototype/engagement-time-travel-v2").resolve()
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+_SCRATCH = _REPO_ROOT / ".scratch" / "bind-time-travel-example"
+
+
+def _path_from_env(var: str, default: Path) -> Path:
+    """Resolve *var* from the environment, falling back to *default*."""
+    return Path(os.environ.get(var) or default).resolve()
+
+
+WORKTREE = _path_from_env("OG_EXAMPLE_WORKTREE", _SCRATCH / "worktree")
+PROJECT = _path_from_env("OG_EXAMPLE_PROJECT", _REPO_ROOT)
+WORKSPACE = _path_from_env("OG_EXAMPLE_WORKSPACE", _SCRATCH / "engagement")
 
 
 INITIAL_PROMPT = f"""# Engagement — Signup process source-code review

@@ -11,7 +11,7 @@
 #
 # Usage:
 #   git clone https://github.com/ogframework/og.git
-#   cd oagp-org
+#   cd og
 #   .\install\install-claude-code-skills.ps1
 #
 # Then restart Claude Code; the skills become discoverable.
@@ -23,7 +23,7 @@ $skillsSource = Join-Path $repoRoot     "skills"
 $skillsDest   = Join-Path $env:USERPROFILE ".claude\skills"
 
 if (-not (Test-Path $skillsSource)) {
-    Write-Error "Source skills directory not found at $skillsSource -- are you running from inside an oagp-org clone?"
+    Write-Error "Source skills directory not found at $skillsSource -- are you running from inside an og clone?"
     exit 1
 }
 
@@ -40,8 +40,19 @@ foreach ($skill in $skills) {
     }
 
     if (Test-Path $dst) {
-        Write-Host "Removing existing: $dst"
-        Remove-Item -Recurse -Force $dst
+        # $dst is normally the junction that a previous run created below. Delete the LINK, never
+        # what it points at: Remove-Item -Recurse on a reparse point has historically traversed it
+        # on some Windows PowerShell 5.1 builds, which would delete the user's clone of this repo
+        # -- i.e. their skill sources. Branching on the ReparsePoint attribute removes that
+        # build-dependent behaviour by construction, so the outcome no longer varies by host.
+        $existing = Get-Item -LiteralPath $dst -Force
+        if ($existing.Attributes -band [IO.FileAttributes]::ReparsePoint) {
+            Write-Host "Removing existing link: $dst"
+            $existing.Delete()
+        } else {
+            Write-Host "Removing existing directory: $dst"
+            Remove-Item -LiteralPath $dst -Recurse -Force
+        }
     }
 
     Write-Host "Creating junction: $dst -> $src"

@@ -6,17 +6,17 @@ OG is an **organizational framework**, not a data format. It is conceptually sep
 
 OG = *Open Governance*. The brand deliberately doesn't hard-code "Agentic": the framework is **currently focused on agentic (AI-inclusive) organizations**, and broadening to human organizations is a forward vision (separate ratification, not current scope).
 
-> **Status:** v0.2.0 — rebranded from OAGP (Open Agentic Governance Pattern) to **OG (Open Governance Framework)** on 2026-06-01; canonical home `ogframework.com`. oagp-strategist + oagp-implementer seats staffed; seven canonical `og-` skills; agent-sdk bind() v0.1 ratified + v0.2 autonomous-dispatch built and demoed. The seat identifiers (`oagp-*`), the GitHub repo/org name, and `oagp.org` remain on their legacy names pending a coordinated rename follow-on (redirects cover the interim). See [decisions/](decisions/), [proposals/](proposals/), [memos/](memos/). Director: [Scott Edsby](mailto:scott@confusedgorilla.com).
+> **Status:** v0.2.1 — rebranded from OAGP (Open Agentic Governance Pattern) to **OG (Open Governance Framework)** on 2026-06-01, and the coordinated rename follow-on **completed** on the same date: seats are `og-strategist` / `og-implementer` (`@ogframework.com`), the repo is [github.com/ogframework/og](https://github.com/ogframework/og), and canonical hosting is `ogframework.com`. Both seats staffed; seven canonical `og-` skills; agent-sdk bind() v0.1 ratified + v0.2 autonomous-dispatch built and demoed; seat-inbox-notification ("doorbell") convention ratified 2026-06-15 with a transport-neutral PoC in [channels/](channels/). Historical artifacts (memos, decisions, transcripts, charter `history[]`) keep their as-of-their-time `oagp-*` names by policy — they are dated records, not live naming. See [decisions/](decisions/), [proposals/](proposals/), [memos/](memos/). Director: [Scott Edsby](mailto:scott@confusedgorilla.com).
 
 ## What's in this repo
 
 ```
-oagp-org/  (GitHub repo; rename to an og-* name is a deferred follow-on)
+og/  (GitHub repo: github.com/ogframework/og)
 ├── README.md                       ← this file
 ├── LICENSE                         ← MIT
 ├── CLAUDE.md                       ← AI operating manual
 ├── org/
-│   └── oagp-organization.opencatalog   ← org charter (id retained pending repo rename)
+│   └── oagp-organization.opencatalog   ← org charter (charter `id` is `ogframework`; the filename is a dated artifact name)
 ├── memos/                          ← inter-position memos
 ├── proposals/                      ← draft proposals
 ├── decisions/                      ← ratified strategist decisions
@@ -24,6 +24,7 @@ oagp-org/  (GitHub repo; rename to an og-* name is a deferred follow-on)
 ├── skills/                         ← canonical OG skills (og-adopt, og-create, og-orient, og-claim-seat, og-closeout, og-snapshot, og-add-position)
 ├── install/                        ← cross-runtime install scripts
 ├── agent-sdk/                      ← agent-runtime bindings (roledefs → AgentDefinitions)
+├── channels/                       ← seat-inbox-notification ("doorbell") PoC: transport-neutral core + adapter
 ├── plugin/                         ← Claude Code plugin packaging (and future cross-runtime packages)
 ├── web/                            ← ogframework.com site source
 └── docs/                           ← canonical framework documentation
