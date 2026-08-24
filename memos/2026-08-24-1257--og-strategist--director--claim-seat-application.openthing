@@ -1,0 +1,32 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+  "from": "og-strategist",
+  "to": "director",
+  "subject": "Claim-seat application: fresh session proposes to resume the already-staffed og-strategist seat (seat-vs-incumbent resumption, not a vacant-seat claim); fit evaluated as strong with three named mismatches (10-week gap since the last session, promotion-pressure as this seat's standing failure mode, no continuity claim); scope accepted and bounds named; awaiting explicit PO authorization per the claim-seat authorization gate",
+  "sent": "2026-08-24T12:57:00-04:00",
+  "action_required": false,
+  "body": "A fresh session proposes to occupy the og-strategist seat, which is already status: staffed (incumbent og-strategist <og-strategist@ogframework.com>, staffed 2026-05-23). Per the seat-vs-incumbent pattern the seat persists while sessions are ephemeral, so this is a resumption -- no charter status/incumbent edit is required. The authorization gate is honored regardless: propose -> authorize -> operate. /og-orient was run first (read-only); no seat work performed. Fit evaluated as strong: scope (OG pattern-shape design decisions, pattern-promotion calls, MUST/SHOULD curation, canonical og- skill content authority, cross-runtime delivery prioritization, adoption-cycle architecture) matches capabilities. Three mismatches named rather than papered over: (1) ~10 weeks have passed since the 2026-06-15 session, so every 'do X' in memos/ is a point-in-time record, not a live instruction -- currency to be verified with the Director before acting; (2) promotion pressure is this seat's standing failure mode, and v1 criterion (d) (one non-spec real-org adopter) remains unmet, so pattern #8 promotion-follows-adoption is to be held, not cleared; (3) no continuity claim -- nothing beyond the substrate is known, and ambiguity will be surfaced rather than reconstructed. Bounds named: no merge/push/tag/release/public statement; no format-shape decisions (route out to the relevant -def-spec strategist); no vendor or substrate advocacy; no charter version bump without ratification; embedded roledef:Job deferred per precedent; no content policing of, or infrastructure imposition on, adopter orgs. Open strategist-scope items inherited: doorbell promotion watch (vendor-neutral transport authorized but unbuilt -- the single gate on conformance #3); pattern-promotion watch-list (thingalog AI-PM seat, three-tier permission composition, seat-capability-manifest) to revisit not re-decide; canonical-orgs library residence reply owed to orgdef-strategist since 2026-05-24-0900; Caliper local-conventions work; record hygiene (six untracked memos, two modified transcripts, unignored .wrangler/). Record correction: main is in sync with origin/main -- the 2026-06-15 doorbell work WAS pushed, contrary to that session's closeout assumption. Awaiting explicit authorization ('take the seat' / 'yes, occupy og-strategist'); the PO may decline or redirect. AUTHORIZATION 2026-08-24: Director granted ('Take the seat'). Seat occupied for this session; no charter edit made (already staffed under the persistent identity; seat-vs-incumbent resumption, matching the 2026-06-14 implementer precedent); this memo stands as the institutional record of the occupation. action_required flipped to false on authorization.",
+  "body_ref": "2026-08-24-1257--og-strategist--director--claim-seat-application.body.md",
+  "metadata": {
+    "drafted_by_session": "claude-opus-5 (1M context), og-strategist chair (proposed), s:/projects-personal/oagp-org. Session 2026-08-24; ran /og-orient then /og-claim-seat strategist.",
+    "scope_check": "Within the claim-seat ceremony. No seat work performed before authorization. No charter edit proposed because the seat is already staffed under the persistent identity (seat-vs-incumbent). Authorization gate respected: this memo is the propose step; occupation and operation await explicit PO authorization.",
+    "applies_principles": [
+      "authorization-gate -- propose, never seize; the PO authorizes occupation",
+      "seat-vs-incumbent -- resuming a persistent already-staffed seat; identity stable across ephemeral sessions; no incumbent re-record needed",
+      "bounded-authority -- read/analyze/draft/argue/propose; Director ratifies-by-merge; no merge/push from this seat",
+      "data-vs-pattern layering -- pattern-shape held here; format-shape routed to the relevant -def-spec strategist",
+      "promotion-follows-adoption -- named as this seat's standing failure mode and explicitly held",
+      "honest-fit -- three mismatches named, not papered over"
+    ],
+    "related_artifacts": [
+      "Position: org/oagp-organization.opencatalog (orgdef:Position id=strategist; status staffed 2026-05-23)",
+      "Precedent for a resumption-shaped application: memos/2026-06-14-1500--og-implementer--director--claim-seat-application",
+      "Most recent seat closeout: memos/2026-06-15-1630--og-strategist--og-strategist--session-closeout-doorbell-ratified-path-b-built-c1-live-confirmed",
+      "Open action-required item for the peer seat: memos/2026-06-15-1600--og-strategist--og-implementer--path-b-verified-three-pattern-questions-resolved",
+      "Standing queue: CLAUDE.md 'Known work items'"
+    ],
+    "authorization": "Granted by Director (Scott) 2026-08-24: 'Take the seat.' Recorded in body section 7. No org/ artifact modified; nothing committed or pushed from this seat."
+  }
+}

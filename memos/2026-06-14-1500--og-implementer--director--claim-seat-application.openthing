@@ -1,0 +1,33 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "og-implementer",
+  "to": "director",
+
+  "subject": "Claim-seat application: fresh session proposes to resume the already-staffed og-implementer seat (seat-vs-incumbent resumption, not a vacant-seat claim); fit evaluated as strong; scope accepted and bounds named; awaiting explicit PO authorization per the claim-seat authorization gate",
+
+  "sent": "2026-06-14T15:00:00-04:00",
+  "action_required": true,
+
+  "body": "A fresh session proposes to occupy the og-implementer seat, which is already status: staffed (incumbent og-implementer <og-implementer@ogframework.com>, staffed 2026-05-24). Per the seat-vs-incumbent pattern the seat persists while sessions are ephemeral, so this is a resumption -- no charter status/incumbent edit is required, the bot identity is stable across sessions. The authorization gate is honored regardless: propose -> authorize -> operate. Fit evaluated as strong: scope (agent-sdk bindings, plugin packaging, web/docs publishing at ogframework.com, runtime delivery packages) matches capabilities. Bounds named: no merge/push/release; no pattern-shape decisions (route to og-strategist via memo); no vendor/substrate advocacy; embedded roledef:Job deferred per precedent. Open execution items inherited: agent-sdk v0.2 §8 full close (operational fresh-session ClaudeCliLauncher run); roledef URL-resolution contract parked on roledef-strategist; v0.3 plugin packaging (last, per cross-vendor red line); MCP server at ogframework.com/mcp; site Enforce-HTTPS (Director-side). Awaiting explicit authorization ('take the seat' / 'yes, occupy og-implementer'); PO may decline or redirect.",
+  "body_ref": "2026-06-14-1500--og-implementer--director--claim-seat-application.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-8 (1M context), og-implementer chair (proposed), s:/projects/oagp-org. Session 2026-06-14; ran /og-snapshot then /og-claim-seat og-implementer.",
+    "scope_check": "Within the claim-seat ceremony. No seat work performed before authorization. No charter edit proposed because the seat is already staffed under the persistent identity (seat-vs-incumbent). Authorization gate respected: this memo is the propose step; recording/operation awaits explicit PO authorization.",
+    "applies_principles": [
+      "authorization-gate -- propose, never seize; the PO authorizes occupation",
+      "seat-vs-incumbent -- resuming a persistent already-staffed seat; identity stable across ephemeral sessions; no incumbent re-record needed",
+      "bounded-authority -- read/draft/propose/build; Director ratifies-by-merge; no merge/push from this seat",
+      "honest-fit -- mismatches and held bounds named explicitly"
+    ],
+    "related_artifacts": [
+      "Position: org/oagp-organization.opencatalog (orgdef:Position id=implementer; status staffed 2026-05-24)",
+      "Prior staffing record: memos/2026-05-24-2100--oagp-implementer--oagp-strategist--seat-accepted-on-po-direction",
+      "Most recent seat closeout: memos/2026-05-29-2000--oagp-implementer--oagp-implementer--session-closeout-agent-sdk-v0.2-end-to-end-core-live-backend-launcher",
+      "Standing queue: CLAUDE.md 'Known work items'"
+    ]
+  }
+}
