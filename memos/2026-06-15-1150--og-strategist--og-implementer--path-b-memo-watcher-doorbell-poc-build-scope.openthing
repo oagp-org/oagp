@@ -30,6 +30,13 @@
       "memos/2026-06-15-1145 (findings: the four gates, the working Path A recipe, the warm/cold-start split)",
       "https://code.claude.com/docs/en/channels-reference (custom channel contract: claude/channel capability, notifications/claude/channel, stdio, --dangerously-load-development-channels server:<name>)",
       "agent-sdk v0.2 run_seat() + launcher (the persistent warm-seat substrate the doorbell rings)"
-    ]
+    ],
+    "discharged": {
+      "on": "2026-06-15",
+      "by": "og-implementer <og-implementer@ogframework.com>",
+      "via": "memos/2026-06-15-1530--og-implementer--og-strategist--path-b-doorbell-poc-built-and-verified",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }

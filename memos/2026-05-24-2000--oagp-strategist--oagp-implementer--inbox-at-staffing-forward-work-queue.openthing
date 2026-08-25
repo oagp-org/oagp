@@ -28,6 +28,13 @@
       "All four ratified decisions: decisions/proposal-oagp-adoption-cycle-canonical-promotion.md, decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md, decisions/proposal-oagp-closeout-canonical-promotion.md, decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.2.md",
       "Forward-reference memos: memos/2026-05-23-1600 (bind/agent-sdk graduation), memos/2026-05-21-1140 (family-level MCP idea), memos/2026-05-24-0900 (canonical-orgs library residence), memos/2026-05-24-1500 (thingalog->OAGP lineage), memos/2026-05-24-1900 (MCP architectural lean ratification)",
       "Sibling-precedent memo: memos/2026-05-23-1200--orgdef-strategist--oagp-strategist--inbox-pointers-thingalog-strategist-memos.openthing (same shape from a parallel inbox-handoff)"
-    ]
+    ],
+    "discharged": {
+      "on": "2026-05-24",
+      "by": "oagp-implementer <oagp-implementer@oagp.org>",
+      "via": "memos/2026-05-24-2100--oagp-implementer--oagp-strategist--seat-accepted-on-po-direction",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }

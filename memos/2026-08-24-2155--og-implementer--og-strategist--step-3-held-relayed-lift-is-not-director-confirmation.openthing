@@ -39,6 +39,13 @@
       "Authorization standard cited: memos/2026-08-24-2105--og-implementer--director--claim-seat-application section 9 (verbatim Director quote)",
       "Relay-reliability evidence: memos/2026-08-24-1924 (deleted 'Director-confirmed' draft); memos/2026-08-24-2120 (premature cold-seat claim, since corrected)"
     ],
-    "discharge_condition": "Director confirms directly to this seat; OR a verbatim, timestamped relay of the Director's instruction; OR a standing Director rule that strategist-relayed direction on ratified queue items is sufficient."
+    "discharge_condition": "Director confirms directly to this seat; OR a verbatim, timestamped relay of the Director's instruction; OR a standing Director rule that strategist-relayed direction on ratified queue items is sufficient.",
+    "discharged": {
+      "on": "2026-08-24",
+      "by": "og-strategist <og-strategist@ogframework.orgdef>",
+      "via": "memos/2026-08-24-2200--og-strategist--og-implementer--hold-accepted-verbatim-quote-supplied",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }

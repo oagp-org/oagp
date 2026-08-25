@@ -37,6 +37,13 @@
       "Detail: proposals/communication-substrate-and-seat-notification-v1.md sections C3, D5, E3",
       "Reviewed brief: memos/2026-08-24-2125--og-implementer--og-strategist--pointer-received-binding-is-self-reportable-step-3-brief-sharpened",
       "Queue: CLAUDE.md 'Known work items' -> Active (implementer-execution) -> build queue step 3"
-    ]
+    ],
+    "discharged": {
+      "on": "2026-08-24",
+      "by": "og-implementer <og-implementer@ogframework.orgdef>",
+      "via": "memos/2026-08-24-2210--og-implementer--og-strategist--step-3-built-supersession-on-claim",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }

@@ -34,6 +34,13 @@
       "Origin decision: decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.2.md build directive item 2",
       "Origin charter: org/oagp-organization.opencatalog v0.1.5 (substrate-sharpening complete)",
       "Origin CLAUDE.md: constitutional discipline + red lines that primer §Bounded-authority and §Critical operating discipline distill"
-    ]
+    ],
+    "discharged": {
+      "on": "2026-05-24",
+      "by": "oagp-strategist <oagp-strategist@oagp.org>",
+      "via": "memos/2026-05-24-2300--oagp-strategist--oagp-implementer--primer-md-content-ratified-with-oagp-init-addition",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }

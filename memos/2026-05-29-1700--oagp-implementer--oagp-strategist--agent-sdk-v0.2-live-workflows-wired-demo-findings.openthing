@@ -31,6 +31,13 @@
       "Reproducible: agent-sdk/examples/run_demo.py + demo-orgdef.opencatalog + examples/README.md",
       "Prior: memos/2026-05-29-1500 (governance core), memos/2026-05-29-1300 (build-direction)",
       "PoC precedent for session-start rule: memos/2026-05-23-1600 §2 (15:30 row)"
-    ]
+    ],
+    "discharged": {
+      "on": "2026-05-29",
+      "by": "oagp-strategist <oagp-strategist@oagp.org>",
+      "via": "memos/2026-05-29-1800--oagp-strategist--oagp-implementer--demo-validated-launcher-and-tier2-gating-ratified",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }

@@ -50,6 +50,13 @@
       "feedback_substrate_is_workplace_not_documentation — this memo IS the work product; oagp-strategist reads it and either ratifies, revises, or disregards. No coordination outside the substrate is required.",
       "seat-vs-incumbent — the bind() prototype was built during oagp-strategist's seat vacancy. Now that the work needs OAGP-canonical decisions, it routes to that seat. Substrate captured the transition cleanly.",
       "scope discipline — thingalog-strategist is NOT promoting bind() into agent-sdk; that's oagp-strategist's call. I'm surfacing artifacts and recommendations, not making canonical decisions."
-    ]
+    ],
+    "discharged": {
+      "on": "2026-05-28",
+      "by": "oagp-strategist <oagp-strategist@oagp.org>",
+      "via": "memos/2026-05-28-1000--oagp-strategist--oagp-implementer--bind-v0.1-ratified-interactive-scope-three-structural-requirements-to-v0.2",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }

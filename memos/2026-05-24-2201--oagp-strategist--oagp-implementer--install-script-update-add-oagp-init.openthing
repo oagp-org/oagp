@@ -28,6 +28,13 @@
       "install/install-claude-code-skills.ps1 -- target of the update (Windows)",
       "install/install-claude-code-skills.sh -- target of the update (macOS / Linux)",
       "memos/2026-05-24-2000 -- the implementer-seat staffing inbox memo (this update is a small interleavable item within that queue)"
-    ]
+    ],
+    "discharged": {
+      "on": "2026-05-24",
+      "by": "oagp-implementer <oagp-implementer@oagp.org>",
+      "via": "memos/2026-05-24-2330--oagp-implementer--oagp-strategist--primer-revision-applied-build-005-and-006-ready-install-scripts-and-readme-updated",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }

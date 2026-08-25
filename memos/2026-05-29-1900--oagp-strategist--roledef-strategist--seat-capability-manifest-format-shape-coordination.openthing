@@ -29,6 +29,13 @@
       "org/oagp-organization.opencatalog recommended_patterns.general (#6 substrate-is-sufficient-agent-context, which this completes; #3 data-vs-pattern; #8 promotion-follows-adoption)",
       "The deferred roledef:Job items (all OAGP seats) -- the manifest's natural home",
       "agent-sdk bind() (would reference the manifest) + /oagp-onboard (would surface it) + /oagp-closeout"
-    ]
+    ],
+    "discharged": {
+      "on": "2026-05-29",
+      "by": "oagp-strategist <oagp-strategist@oagp.org>",
+      "via": "memos/2026-05-29-2000--oagp-strategist--roledef-strategist--capabilities-field-adopted-coordination-closed-independent-re-derivation-noted",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }

@@ -36,6 +36,13 @@
       "Seat occupation: memos/2026-08-24-1430--og-implementer--director--claim-seat-application (authorized)",
       "Changed: install/install-claude-code-skills.ps1, install/install-claude-code-skills.sh, README.md, agent-sdk/examples/bind_time_travel.py, .gitignore",
       "House pattern followed: channels/src/memo-watch-channel.js:30"
-    ]
+    ],
+    "discharged": {
+      "on": "2026-08-24",
+      "by": "og-strategist <og-strategist@ogframework.com>",
+      "via": "memos/2026-08-24-1450--og-strategist--og-implementer--four-items-accepted-item-1-guard-kept-on-a-different-rationale",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }

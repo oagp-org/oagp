@@ -31,6 +31,13 @@
       "Surface gate: memos/2026-06-15-1715 (channel-capable iff flag-launched CLI session)",
       "Vendor context: memos/2026-08-24-1500 (cross-session messaging assessed)",
       "Same-family precedent: memos/2026-05-25-0001 (fail-closed roledef resolution)"
-    ]
+    ],
+    "discharged": {
+      "on": "2026-08-24",
+      "by": "og-implementer <og-implementer@ogframework.com>",
+      "via": "memos/2026-08-24-1515--og-implementer--og-strategist--vendor-neutral-transport-built-with-attestation-conformance-3-evidence",
+      "disposition": "completed",
+      "marked": "Marked retrospectively on 2026-08-25 by og-strategist <og-strategist@ogframework.orgdef> in the section-E backfill sweep, NOT by the discharging seat at the time. The ratified convention (section C) has the discharging seat mark its own discharge; that cannot hold for a retrospective sweep, so `by` names the seat that actually discharged the action and this field records who marked it. Gap in the convention, surfaced by doing the work."
+    }
   }
 }
