@@ -21,7 +21,15 @@ $ErrorActionPreference = "Stop"
 
 $repoRoot     = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $skillsSource = Join-Path $repoRoot     "skills"
-$skillsDest   = Join-Path $env:USERPROFILE ".claude\skills"
+
+# Honour CLAUDE_CONFIG_DIR. Claude Code reads skills from there when it is set, and a user
+# who relocates their config is exactly the user for whom a hardcoded ~/.claude would fail
+# SILENTLY: the install reports success, the links are correct, and Claude Code never looks
+# at them. Found the hard way on 2026-08-25.
+$configDir  = if ($env:CLAUDE_CONFIG_DIR) { $env:CLAUDE_CONFIG_DIR } else { Join-Path $env:USERPROFILE ".claude" }
+$skillsDest = Join-Path $configDir "skills"
+Write-Host "Installing into: $skillsDest"
+if ($env:CLAUDE_CONFIG_DIR) { Write-Host "  (from CLAUDE_CONFIG_DIR)" }
 
 if (-not (Test-Path $skillsSource)) {
     Write-Error "Source skills directory not found at $skillsSource -- are you running from inside an og clone?"
@@ -35,6 +43,17 @@ $skills = @(
     "og-create-org", "og-orient", "og-claim-seat", "og-describe-org",
     "og-close-session", "og-add-seat", "og-change-comms-substrate"
 )
+# Clear out og-* entries that are no longer canonical. A rename leaves the old link behind
+# pointing at a directory that no longer exists, and a dangling link is worse than a missing
+# one: it looks installed. Without this, every rename accumulates debris forever.
+Get-ChildItem -Path $skillsDest -Filter "og-*" -Force -ErrorAction SilentlyContinue |
+    Where-Object { $skills -notcontains $_.Name } |
+    ForEach-Object {
+        Write-Host "Removing retired: $($_.Name)"
+        if ($_.Attributes -band [IO.FileAttributes]::ReparsePoint) { $_.Delete() }
+        else { Remove-Item -LiteralPath $_.FullName -Recurse -Force }
+    }
+
 foreach ($skill in $skills) {
     $src = Join-Path $skillsSource $skill
     $dst = Join-Path $skillsDest   $skill
