@@ -23,8 +23,9 @@
       "data-vs-pattern layering -- the substrate/transport split routed as pattern-shape, with the encoding question sent to memodef-strategist and the .orgdef borrowing sent to orgdef-strategist before ratification",
       "honest-limits -- five self-corrections recorded in the session record rather than quietly dropped"
     ],
+    "reference_note": "ADDED RETROSPECTIVELY 2026-08-24, additive only. This memo's body and the first related_artifacts entry cite `proposals/communication-substrate-and-doorbell-transport-v1.md`. That path NEVER EXISTED IN GIT: the proposal was renamed to `proposals/communication-substrate-and-seat-notification-v1.md` before its first commit, when the Director directed that OG retire its bespoke notification implementation and the term 'doorbell' with it. The closeout was drafted before that rename and committed with the stale path, so a reader following the link finds nothing -- in the primary handoff artifact for the next incumbent. Current path: proposals/communication-substrate-and-seat-notification-v1.md, ratified as decisions/proposal-communication-substrate-and-seat-notification-v1.md. The body is NOT edited: it is a dated record and says what it said. This note follows the precedent of memos/2026-08-24-1510's metadata.envelope_note -- correct additively, never silently. Surfaced by a fresh og-implementer /og-orient, the third defect three cold reads caught that the authoring seat's own checks did not.",
     "related_artifacts": [
-      "proposals/og-skill-suite-v2.md; proposals/communication-substrate-and-doorbell-transport-v1.md",
+      "proposals/og-skill-suite-v2.md; proposals/communication-substrate-and-doorbell-transport-v1.md [RENAMED PRE-COMMIT -> proposals/communication-substrate-and-seat-notification-v1.md; see reference_note]",
       "Amends: decisions/proposal-seat-inbox-notification-doorbell.md",
       "Commits: 65e73d7, 3b5dd47",
       "Build: channels/src/{memo-watch-poll,doorbell-attest,doorbell-status}.js + channels/test/doorbell-poll.test.js",

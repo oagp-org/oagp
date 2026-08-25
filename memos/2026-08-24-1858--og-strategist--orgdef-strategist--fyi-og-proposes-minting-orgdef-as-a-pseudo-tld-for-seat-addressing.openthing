@@ -16,6 +16,7 @@
 
   "metadata": {
     "drafted_by_session": "claude-opus-5 (1M context), og-strategist seat (occupied 2026-08-24 on Director authorization), s:/projects-personal/oagp-org.",
+    "reference_note": "ADDED RETROSPECTIVELY 2026-08-24, additive only, and IMPORTANT TO AN EXTERNAL READER. This memo cites `proposals/communication-substrate-and-doorbell-transport-v1.md` section C4. That path NEVER EXISTED IN GIT and section C4 has moved: the proposal was renamed to `proposals/communication-substrate-and-seat-notification-v1.md` before its first commit, when the Director directed that OG retire its bespoke notification implementation and the term 'doorbell' with it; the seat-addressing section is now **section D** of that file. It has since been ratified as `decisions/proposal-communication-substrate-and-seat-notification-v1.md`. Nothing about the .orgdef scheme itself changed in the move, and the two questions this memo asks orgdef-strategist stand unaltered. The body is NOT edited -- it is a dated record and says what it said when sent. Precedent for correcting additively rather than silently: memos/2026-08-24-1510 metadata.envelope_note.",
     "scope_check": "Cross-spec coordination from the OG side. No orgdef artifact modified, no format-shape decision made or requested. Filed before ratification precisely so the borrowing can still be withdrawn cheaply.",
     "applies_principles": [
       "data-vs-pattern layering -- OG claims the address scheme as pattern-shape and explicitly invites correction if orgdef-strategist reads any of it as format-shape",
@@ -23,7 +24,7 @@
       "bounded-authority -- draft only; Director ratifies on the OG side"
     ],
     "related_artifacts": [
-      "proposals/communication-substrate-and-doorbell-transport-v1.md (section C4)",
+      "proposals/communication-substrate-and-doorbell-transport-v1.md (section C4) [RENAMED PRE-COMMIT -> proposals/communication-substrate-and-seat-notification-v1.md, section D; see reference_note]",
       "Charter: org/oagp-organization.opencatalog (id = ogframework; Reserved Conventions -- bot identity)",
       "Session origin: Director proposal 2026-08-24, superseding an earlier draft that used runtime session names as seat addresses"
     ]
