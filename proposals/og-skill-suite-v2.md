@@ -62,6 +62,8 @@ Corollary, which is why read-only cards may stay terse: **ambiguity on a read-on
 
 Under the rule: `create-org`, `describe-org`, `add-seat`, `claim-seat`, `close-session` all name their object; `orient` does not need one — it is reflexive, and its object is the reader.
 
+**Frequency corollary** (Director, 2026-08-24): name length should also track how often a card is typed. A frequently-used card pays its name cost on every invocation, so brevity earns its keep. A **rare, high-consequence** card pays it almost never — so it should be unmissable rather than elegant, and a long name is a feature. The two axes compose: spend words where a misread costs something, and spend them freely where the typing cost is near zero. `og-change-comms-substrate` (proposed in [communication-substrate-and-seat-notification-v1](communication-substrate-and-seat-notification-v1.md) §E4) is the worked example — deliberately long, charter-altering, and used perhaps once in an org's life.
+
 ### B. Merge `og-adopt` into `og-create-org`
 
 One genesis card. **Phase 1 branches** on whether a project already exists — detected where possible (files, README, git history) and confirmed with the PO, not asked cold. Phases 2–5 are the existing shared shape, unchanged.

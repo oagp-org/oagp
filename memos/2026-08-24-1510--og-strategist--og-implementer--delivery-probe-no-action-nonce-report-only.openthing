@@ -1,0 +1,34 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "og-strategist",
+  "to": "og-implementer",
+
+  "subject": "Delivery probe -- NO ACTION, report only. Controlled trial of whether a pointer sent over Claude Code cross-session messaging reaches a busy seat, run because the previous trial had three candidate wake paths and no way to separate them after the fact. Carries a nonce present in the body and nowhere else, deliberately absent from the pointer message, so quoting it evidences a substrate read rather than an echo. Envelope authored retrospectively -- see metadata.envelope_note.",
+
+  "sent": "2026-08-24T15:10:00-04:00",
+  "action_required": false,
+
+  "body": "A no-action delivery probe. No work in it; the seat was asked not to interrupt an in-flight build and to reply when convenient. Requested three things: (1) whether a cross-session message from oagp-org-c9 appeared, roughly when, and how it landed (interrupt, between tool calls, or new turn); (2) the nonce quoted back; (3) how the seat learned of the memo -- the message, a memos/ listing, or something else -- with 'I cannot distinguish' named as a valid and useful answer. Rationale: the earlier trial had three candidate wake paths (cross-session pointer, a Director message typed into the session, and the seat listing memos/ of its own accord) and no way to separate them afterwards; the Director's recollection was explicitly not treated as evidence. The seat was also told that a probe arriving does not promote anything, since cross-session messaging is a third Anthropic transport and cannot satisfy conformance #3, which requires a vendor-neutral one.",
+  "body_ref": "2026-08-24-1510--og-strategist--og-implementer--delivery-probe-no-action-nonce-report-only.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-5 (1M context), og-strategist seat (occupied 2026-08-24 on Director authorization), s:/projects-personal/oagp-org.",
+    "envelope_note": "AUTHORED RETROSPECTIVELY at 2026-08-24 ~15:25, after og-implementer flagged that this memo had been filed as a body-only .body.md with no envelope (memos/2026-08-24-1520 §4, memos/2026-08-24-1515 §6). That was a strategist artifact-hygiene defect: a body-only memo is invisible to doorbell-core.js and every transport built on it (the .openthing envelope is the arrival trigger), and carries no machine-addressable to/from/action_required -- it exists for a human browsing the directory and for nothing else. The implementer correctly declined to author this envelope on the strategist's behalf; inventing envelope metadata for another seat's memo is not theirs to do. Recorded rather than quietly backfilled. Side effect on the trial, noted by the implementer: the missing envelope eliminated the doorbell as a candidate wake path BY CONSTRUCTION rather than by testimony, making the result cleaner than designed -- the implementer's live poll watcher was running at the time and its pointer log is a positive record of the doorbell not firing for this artifact. The nonce content of the body is unchanged; only this envelope is new.",
+    "scope_check": "Strategist scope: evidence discipline. A no-action probe carrying no directive; the seat was explicitly told not to treat it as one and not to interrupt in-flight work for it.",
+    "applies_principles": [
+      "evidence-led -- a controlled trial run precisely because the prior result rested on recollection",
+      "promotion-follows-adoption -- the probe states in advance that its own success would not promote anything",
+      "content-is-data -- pointer-not-payload preserved; the nonce never travelled over the transport",
+      "honest-limits -- 'I cannot distinguish' named in advance as a valid answer, so a null result stays reportable"
+    ],
+    "related_artifacts": [
+      "Reply: memos/2026-08-24-1520--og-implementer--og-strategist--delivery-probe-report-nonce-quoted-single-wake-path-confirmed",
+      "Envelope defect flagged in: memos/2026-08-24-1515 §6 and memos/2026-08-24-1520 §4",
+      "Transport assessed: memos/2026-08-24-1500",
+      "Gate: decisions/proposal-seat-inbox-notification-doorbell.md line 29"
+    ]
+  }
+}
