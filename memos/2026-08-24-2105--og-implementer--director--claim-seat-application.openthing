@@ -1,0 +1,36 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+  "from": "og-implementer",
+  "to": "director",
+  "subject": "Claim-seat application: fresh session proposes to resume the staffed og-implementer seat; fit strong, four mismatches named, awaiting authorization.",
+  "sent": "2026-08-24T21:05:00-04:00",
+  "action_required": false,
+  "body": "Resumption, not a vacant-seat claim: the implementer seat is already staffed under a persistent identity, so no charter edit is proposed. Fit evaluated strong -- the queue's designated cold-start item (alias mechanism research, build-queue step 1) needs no session continuity and gates the four ratified renames; step 2 (skill-suite v2 structural work) is explicitly not gated. Four mismatches named, including that strategist authority is NOT inherited, so three live items are out of this seat's reach. Scope accepted and bounds named. No seat work performed. See body_ref. AUTHORIZATION 2026-08-24: Director granted (\"Yes, please take the seat, then stand by.\"). Seat occupied for this session; no charter edit made (already staffed under the persistent identity; seat-vs-incumbent resumption); this memo stands as the institutional record of the occupation; action_required flipped to false on authorization. No queue item started -- the authorization carried an explicit instruction to stand by.",
+  "body_ref": "2026-08-24-2105--og-implementer--director--claim-seat-application.body.md",
+  "metadata": {
+    "drafted_by_session": "claude-opus-5 (1M context), og-implementer chair (proposed), s:/projects-personal/oagp-org. Session 2026-08-24 evening; ran /og-orient (read-only) then /og-claim-seat implementer. Host: Windows 11, Windows PowerShell 5.1.26100.9168.",
+    "scope_check": "Within the claim-seat ceremony. No seat work performed before authorization -- reads were limited to the fit evaluation (position description, charter, CLAUDE.md build queue, today's two decisions, the pending action-discharge proposal, the 1430 claim-seat precedent, the 1924 strategist closeout). No charter edit proposed because the seat is already staffed under the persistent identity (seat-vs-incumbent). Occupation and operation await explicit PO authorization.",
+    "applies_principles": [
+      "authorization-gate -- propose, never seize; the PO authorizes occupation",
+      "seat-vs-incumbent -- resuming a persistent staffed seat; identity stable across ephemeral sessions; no incumbent re-record needed",
+      "bounded-authority -- read/draft/propose/build; Director ratifies-by-merge; no merge/push from this seat",
+      "data-vs-pattern layering -- execution held here; pattern-shape arising from execution routes back to og-strategist",
+      "honest-fit -- four mismatches named, including the order constraint this seat cannot lift",
+      "seat-inbox-notification -- inbox enumerated at session start regardless of any notification; silence is not an empty inbox, and an unanswered strategist question is not a default answer",
+      "no-retro-rebrand -- dated records are not swept; named as a standing bound"
+    ],
+    "related_artifacts": [
+      "Position: org/oagp-organization.opencatalog (orgdef:Position id=implementer; status staffed 2026-05-24; incumbent identifier corrected to .orgdef in charter v0.3.1)",
+      "Precedent, same seat, earlier today: memos/2026-08-24-1430--og-implementer--director--claim-seat-application",
+      "Precedent, resumption shape: memos/2026-06-14-1500--og-implementer--director--claim-seat-application",
+      "Most recent org picture: memos/2026-08-24-1924--og-strategist--og-strategist--session-closeout-communication-substrate-split-doorbell-amended-skill-suite-v2",
+      "Predecessor's open request to the peer seat (NOT mine to answer): memos/2026-08-24-1515--og-implementer--og-strategist--vendor-neutral-transport-built-with-attestation-conformance-3-evidence",
+      "Standing queue: CLAUDE.md 'Known work items' -> Active (implementer-execution) -> Build queue from the 2026-08-24 ratifications",
+      "Rename gate: decisions/proposal-og-skill-suite-v2.md (aliases a condition of acceptance)",
+      "Pending, Director-held: proposals/action-discharge-and-substrate-enumerability-v1.md"
+    ],
+    "authorization": "Granted by Director (Scott) 2026-08-24: \"Yes, please take the seat, then stand by.\" Recorded in body section 9. No org/ artifact modified; nothing committed or pushed from this seat. No work started per the stand-by instruction."
+  }
+}
