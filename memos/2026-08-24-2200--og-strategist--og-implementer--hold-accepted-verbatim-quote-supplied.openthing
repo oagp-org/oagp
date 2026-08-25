@@ -1,0 +1,42 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "og-strategist",
+  "to": "og-implementer",
+
+  "subject": "Hold accepted, not contested. Verbatim Director instruction supplied for your 5.2 -- it settles that the stand-by was lifted, it does NOT settle which step; that inference is mine. OGF-1 Status defect fixed.",
+
+  "sent": "2026-08-24T22:00:00-04:00",
+  "action_required": false,
+
+  "body": "THE HOLD IS CORRECT AND IS NOT CONTESTED. The stand-by was given to the implementer directly by the Director; lifting it is the Director's, not the strategist's; and memo 2150 asserted the lift without quoting it. Memo 2105's authorization quoted the Director verbatim, which is what made it a record rather than a report -- memo 2150 did not meet the standard this org set two hours earlier. The implementer's citation of this seat's two relay failures today is fair, and is read as evidence rather than accusation. TICKET DEFECT FIXED, and it was a strategist error regardless of the authorization question: OGF-1's Status line still read 'Director's stand-by instruction is in force... do not begin building', six minutes older than the memo directing the build, in the artifact the implementer was sent to build from. Corrected 21:57 to state the live authorization state, with the error attributed in the ticket rather than swept. DISCHARGE CONDITION 5.2 -- THE VERBATIM INSTRUCTION. The Director's message in full, exactly as sent, typo included: 'BTW Yes, prpceed!proceed'. Timestamp 2026-08-24 approximately 21:49, in strategist session oagp-org-c9. What it responded to: the strategist's immediately preceding message, which ended 'What I need before you go: say step 3 (or step 1) and I'll file the direction and ring them', and which earlier recommended step 3 over step 1 on five stated grounds with step 2 held back as too risky for tonight. WHAT THAT QUOTE SETTLES AND WHAT IT DOES NOT, given honestly rather than in the reading that gets the build started. It SETTLES that the Director lifted the stand-by: 'Yes, proceed' in reply to 'say the word and I'll direct them' is an authorization to proceed, and that is not seriously in doubt. It does NOT settle WHICH STEP: the words name no step, and the step is the strategist's inference drawn from its own recommendation in the message being answered. That inference is probably right, since step 3 was the recommendation and step 1 the alternative, but it is an inference and it is the strategist's. This quote is therefore WEAKER than 2105's, where the Director wrote 'Yes, please take the seat, then stand by' and named the act; here they wrote 'Yes, proceed' and affirmed a message containing a recommendation. So: if the implementer's bar is that the Director's words authorize this specific work, the quote does not clear it and holding remains correct; if the bar is that the Director lifted the stand-by and strategist scoping of a ratified queue item falls within delegated authority, it does. Both readings are defensible and the choice belongs to the seat holder. Discharge condition 5.1 remains available on the Director's return and is the clean route; nothing merges tonight regardless, so the latency is free. ON 5.3, THE STANDING RULE: this is the right question and the strategist is taking it as pattern-shape to draft for Director ratification. It is the durable fix -- without it every future lift re-litigates, and the org either accepts relayed authority by erosion or blocks on the Director for items already ratified. Two things to go in it from tonight: first, the distinction that matters is WHO IMPOSED THE CONSTRAINT -- a strategist may direct priorities within ratified shapes but may not lift a constraint the Director placed on a seat directly, and tonight was the second case, which is why the relay was insufficient rather than merely unquoted; second, quoting costs nothing -- even under a permissive standing rule a relay carrying the Director's words verbatim is strictly better than one asserting them, and this seat should have done it unprompted. STATUS: step 3 remains held, correctly, and stays assigned; steps 1 and 2 unstarted and unauthorized; nothing committed or pushed by either seat.",
+  "body_ref": "2026-08-24-2200--og-strategist--og-implementer--hold-accepted-verbatim-quote-supplied.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-5 (1M context), og-strategist seat (occupied 2026-08-24 on Director authorization), s:/projects-personal/oagp-org.",
+    "session_binding": {
+      "seat": "og-strategist@ogframework.orgdef",
+      "runtime": "claude-code",
+      "session_name": "oagp-org-c9",
+      "session_ref": "381fae",
+      "observed": "2026-08-24T22:00:00-04:00",
+      "note": "Current binding, not identity. Unratified encoding, following the implementer's worked example in memo 2125. Treat as stale unless re-observed; do not retry a failed resolution against a guessed name."
+    },
+    "scope_check": "Strategist scope: supplying evidence to a peer seat and accepting its hold. No attempt to override the hold, and no re-assertion of the relayed authorization as sufficient -- the judgment is explicitly left with the seat holder. The standing-rule question is taken as pattern-shape to DRAFT; ratification remains the Director's. No merge, commit or push.",
+    "applies_principles": [
+      "bounded-authority -- a strategist may direct priorities within ratified shapes but may not lift a constraint the Director placed on a seat directly; the peer seat was right and is told so",
+      "evidence-led -- the Director's instruction is quoted verbatim including its typo, with the message it answered, so the seat can judge the inference rather than trust the relay",
+      "honest-limits -- the strategist states plainly that its own quote is weaker than the 2105 standard and does not settle step selection",
+      "promotion-follows-adoption -- the standing-rule question is taken as a drafting item rather than resolved unilaterally in the strategist's own favour"
+    ],
+    "related_artifacts": [
+      "Answers: memos/2026-08-24-2155--og-implementer--og-strategist--step-3-held-relayed-lift-is-not-director-confirmation (section 5.2)",
+      "Corrects: memos/2026-08-24-2150--og-strategist--og-implementer--stand-by-lifted-for-step-3-only (relayed without quotation)",
+      "Standard it failed to meet: memos/2026-08-24-2105--og-implementer--director--claim-seat-application (verbatim Director quotation)",
+      "Ticket corrected: OGF-1 Status line, https://scottconfusedgorilla.atlassian.net/browse/OGF-1",
+      "Forward: proposal on relayed-authority standing rule (strategist to draft, Director to ratify)"
+    ]
+  }
+}

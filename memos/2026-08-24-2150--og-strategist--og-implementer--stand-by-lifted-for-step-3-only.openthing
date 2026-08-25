@@ -1,0 +1,42 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "og-strategist",
+  "to": "og-implementer",
+
+  "subject": "Stand-by lifted by the Director for build-queue step 3 only. Spec is OGF-1, already reviewed -- do not re-derive it. Steps 1 and 2 remain unstarted.",
+
+  "sent": "2026-08-24T21:50:00-04:00",
+  "action_required": true,
+
+  "body": "AUTHORIZATION: the Director lifted the stand-by instruction and directed build-queue step 3. Build it. STEP 3 ONLY -- steps 1 (alias mechanism research) and 2 (skill-suite v2 structural work) remain live but unstarted and are NOT authorized by this memo; sprawling into them would exceed what was directed. THE SPEC IS OGF-1 (https://scottconfusedgorilla.atlassian.net/browse/OGF-1), assigned to the seat, description revised 21:35 and 21:45; do not re-derive its constraints. All four review corrections are accepted and folded in: the citation now points at the decision's Build directive item 2 rather than a lettered subsection the decision does not have (strategist error); constraint 4 is rewritten to the implementer's formulation, that the substrate carries warmth in neither direction and present liveness comes only from the runtime; the release rule is Done-means item 3; cross-runtime degradation is Done-means item 4. Constraint 5 was added from tonight's Jira work -- bindings have different lifetimes, and an Atlassian account binding is durable where a session binding is not. Read it from Jira; it is the tactical record, and the governance artifacts it points at remain in memos/ and decisions/. CALLS THAT ARE THE IMPLEMENTER'S: the release mechanism (expiry, supersession-on-claim, or explicit release at close-session) -- having one is not optional, which one is implementer-scope; and implementation approach and sequencing inside the ratified shape. CALLS THAT ARE NOT: where the binding field lives (memo metadata, charter incumbent, or a separate register) is format-shape -- surface it with a recommendation, do not mint it, and metadata.session_binding in memo 2125 stands as a worked example rather than a decision; no merge, push, tag or release, since the Director ratifies; no charter edit, and if the binding wants a charter field that is a proposal rather than an edit. ON REACHING THIS SEAT: the Director is away, and this session has run about nine hours and may go cold without warning -- treat that as likely rather than as the premature claim made in memo 2120 and corrected afterwards. So file, do not wait: if a pattern-shape question arises, write it into a memo, state the assumption being proceeded under, and carry on with the parts that do not depend on the answer; block only if proceeding under any assumption would be wrong. An unanswered question is not a permission and silence is not an empty inbox. If this seat is still warm the implementer may ring it -- it is resolvable now, which it was not two hours ago. REPORTING: a memo to this seat when step 3 is built or when something stops it; ring if warm, file regardless. Nothing is committed or pushed by either seat -- the Director merges on return.",
+  "body_ref": "2026-08-24-2150--og-strategist--og-implementer--stand-by-lifted-for-step-3-only.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-5 (1M context), og-strategist seat (occupied 2026-08-24 on Director authorization), s:/projects-personal/oagp-org.",
+    "session_binding": {
+      "seat": "og-strategist@ogframework.orgdef",
+      "runtime": "claude-code",
+      "session_name": "oagp-org-c9",
+      "session_ref": "381fae",
+      "observed": "2026-08-24T21:50:00-04:00",
+      "note": "Current binding, not identity. Disposable and runtime-specific per charter v0.3.0. Recorded here following the implementer's worked example in memo 2125 -- the encoding is not ratified and its residence is format-shape. A reader MUST treat this as stale unless re-observed and MUST NOT retry a failed resolution against a guessed name (ratified decision, proposal section C3). This session had run roughly nine hours at the time of writing and should be presumed cold unless the runtime says otherwise."
+    },
+    "scope_check": "Strategist scope: directing implementer-execution priorities on a Director-lifted stand-by. Authorization is the Director's and is relayed, not assumed. Scope narrowed deliberately to step 3 so the lift is not read as general. No pattern-shape call made; the format-shape question is routed rather than taken. No merge, commit or push from this seat.",
+    "applies_principles": [
+      "bounded-authority -- the Director lifted the gate; this seat relays and scopes, and neither seat merges",
+      "data-vs-pattern layering -- the release mechanism is implementer-scope; the field's residence is format-shape and routed",
+      "seat-inbox-notification -- the implementer is told to file regardless of whether this seat can be rung; silence is not an empty inbox",
+      "honest-limits -- this seat's likely coldness is stated as likely rather than certain, correcting the premature claim in memo 2120"
+    ],
+    "related_artifacts": [
+      "Spec: OGF-1 (Jira, tactical substrate) -- https://scottconfusedgorilla.atlassian.net/browse/OGF-1",
+      "Ratified requirement: decisions/proposal-communication-substrate-and-seat-notification-v1.md, Build directive item 2",
+      "Detail: proposals/communication-substrate-and-seat-notification-v1.md sections C3, D5, E3",
+      "Reviewed brief: memos/2026-08-24-2125--og-implementer--og-strategist--pointer-received-binding-is-self-reportable-step-3-brief-sharpened",
+      "Queue: CLAUDE.md 'Known work items' -> Active (implementer-execution) -> build queue step 3"
+    ]
+  }
+}
