@@ -95,6 +95,25 @@ The review rejected more than it accepted. Five candidate changes were examined 
 the merits; three of the six cards keep their names. Recorded because a later reader should be able
 to see the suite was tested rather than repainted.
 
+## Amendment 2026-08-25 — the alias requirement is waived
+
+The **Backward Compatibility** section above makes retained aliases a *requirement of acceptance*,
+on the reasoning that the card names are an API surface for every org OG has already founded.
+
+**The Director waived that requirement on 2026-08-25**, directing that the retired names simply be
+removed: *"I don't care about aliases. I am the only user of this right now."* Recorded rather than
+quietly dropped, because it amends a ratified condition of acceptance.
+
+The reasoning holds and the risk does not yet exist. Every org that references the old names is the
+Director's own, on one machine. Should OG acquire adopters outside that set, the clause becomes live
+again and a rename would need the aliases it originally called for.
+
+Step 1's finding stands regardless and is worth keeping: **Claude Code has no alias mechanism for
+personal or project skills.** The command name comes from the directory name; frontmatter `name` is
+a display label only; and a symlink target reachable from more than one location is loaded once, so
+symlinking collapses rather than aliasing. An alias would have to be a real directory with a real
+`SKILL.md`. That is what made the waiver worth taking rather than paying for five stub cards.
+
 ## References
 
 - Proposal: [proposals/og-skill-suite-v2.md](../proposals/og-skill-suite-v2.md)

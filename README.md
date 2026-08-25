@@ -6,7 +6,7 @@ OG is an **organizational framework**, not a data format. It is conceptually sep
 
 OG = *Open Governance*. The brand deliberately doesn't hard-code "Agentic": the framework is **currently focused on agentic (AI-inclusive) organizations**, and broadening to human organizations is a forward vision (separate ratification, not current scope).
 
-> **Status:** v0.2.1 — rebranded from OAGP (Open Agentic Governance Pattern) to **OG (Open Governance Framework)** on 2026-06-01, and the coordinated rename follow-on **completed** on the same date: seats are `og-strategist` / `og-implementer` (`@ogframework.com`), the repo is [github.com/ogframework/og](https://github.com/ogframework/og), and canonical hosting is `ogframework.com`. Both seats staffed; seven canonical `og-` skills; agent-sdk bind() v0.1 ratified + v0.2 autonomous-dispatch built and demoed; seat-inbox-notification ("doorbell") convention ratified 2026-06-15 with a transport-neutral PoC in [channels/](channels/). Historical artifacts (memos, decisions, transcripts, charter `history[]`) keep their as-of-their-time `oagp-*` names by policy — they are dated records, not live naming. See [decisions/](decisions/), [proposals/](proposals/), [memos/](memos/). Director: [Scott Edsby](mailto:scott@confusedgorilla.com).
+> **Status:** charter v0.3.2 — rebranded from OAGP to **OG (Open Governance Framework)** 2026-06-01; canonical home `ogframework.com`; repo [github.com/ogframework/og](https://github.com/ogframework/og). Both AI seats staffed. **Skill suite v2** built 2026-08-25: seven cards, substrate-aware, seams composed. **Communication substrate / seat notification** split ratified — OG ships no notification component; orgs use what their runtime provides, and a seat enumerates its inbox at session start regardless. Nine canonical `recommended_patterns`. Historical artifacts keep their as-of-their-time `oagp-*` names by policy — dated records, not live naming. See [decisions/](decisions/), [proposals/](proposals/), [memos/](memos/). Director: [Scott Edsby](mailto:scott@confusedgorilla.com).
 
 ## What's in this repo
 
@@ -21,7 +21,7 @@ og/  (GitHub repo: github.com/ogframework/og)
 ├── proposals/                      ← draft proposals
 ├── decisions/                      ← ratified strategist decisions
 ├── transcripts/                    ← per-seat reasoning records
-├── skills/                         ← canonical OG cards (og-create-org, og-orient, og-claim-seat, og-describe-org, og-close-session, og-add-seat, og-change-comms-substrate) + redirect stubs for retired names
+├── skills/                         ← canonical OG cards (og-create-org, og-orient, og-claim-seat, og-describe-org, og-close-session, og-add-seat, og-change-comms-substrate)
 ├── install/                        ← cross-runtime install scripts
 ├── agent-sdk/                      ← agent-runtime bindings (roledefs → AgentDefinitions)
 ├── channels/                       ← seat-inbox-notification ("doorbell") PoC: transport-neutral core + adapter
@@ -60,8 +60,6 @@ Seven `og-` cards in three categories. The suite is the discoverable menu of can
 
 **The cards compose:** `/og-describe-org` ← `/og-orient` ← `/og-claim-seat`. Each is independently runnable; each calls down rather than restating. The read-only half of a pair exists so the consequential half can rest on it.
 
-**Retired names still work.** `/og-adopt`, `/og-create`, `/og-snapshot`, `/og-closeout` and `/og-add-position` are kept as **redirect stubs** — they tell you the name changed and route you to the current card. Claude Code has no alias mechanism for personal or project skills (the command name comes from the *directory* name; frontmatter `name` is only a display label), so an alias has to be a real directory. Retaining them was a condition of accepting the renames: the names are an API surface for every org OG has already founded.
-
 Skill suite v2 ratified 2026-08-24 ([decisions/proposal-og-skill-suite-v2.md](decisions/proposal-og-skill-suite-v2.md)), superseding the v1 architecture ([decisions/proposal-og-skill-architecture-v1.md](decisions/proposal-og-skill-architecture-v1.md)). When canonical web hosting at [ogframework.com](https://ogframework.com) is live, canonical content also serves there.
 
 ## Quick install (Claude Code)
@@ -82,7 +80,7 @@ cd og
 ./install/install-claude-code-skills.sh
 ```
 
-The install script creates a junction (Windows) or symlink (Unix) from `~/.claude/skills/og-{adopt,create,orient,claim-seat,closeout,snapshot,add-position}` into this clone's `skills/` directory. Restart Claude Code; the skills become discoverable.
+The install script creates a junction (Windows) or symlink (Unix) from `~/.claude/skills/og-{create-org,orient,claim-seat,describe-org,close-session,add-seat,change-comms-substrate}` into this clone's `skills/` directory. Restart Claude Code; the cards become discoverable. **Re-run it after a card is renamed** — a rename breaks the existing link.
 
 To update later: `git pull` in this clone — the junction/symlink tracks the working tree, so updates land without re-installing.
 

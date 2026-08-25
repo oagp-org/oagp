@@ -2,8 +2,8 @@
 #
 # Installs the canonical OG (Open Governance Framework) skills
 # (/og-create-org, /og-orient, /og-claim-seat, /og-describe-org,
-# /og-close-session, /og-add-seat, /og-change-comms-substrate), plus
-# redirect stubs for the retired names, into the current user's Claude Code
+# /og-close-session, /og-add-seat, /og-change-comms-substrate),
+# into the current user's Claude Code
 # skills directory via Windows filesystem junctions pointing at this
 # clone of the OG repo.
 #
@@ -30,14 +30,10 @@ if (-not (Test-Path $skillsSource)) {
 
 New-Item -ItemType Directory -Force -Path $skillsDest | Out-Null
 
-# Seven canonical cards, plus five redirect stubs kept so retired names stay invocable.
-# Claude Code has no alias mechanism for personal/project skills -- the command name comes
-# from the DIRECTORY name, and frontmatter `name` is only a display label -- so an alias has
-# to be a real directory. The stubs route to the current card and carry no content.
+# The seven canonical OG cards.
 $skills = @(
     "og-create-org", "og-orient", "og-claim-seat", "og-describe-org",
-    "og-close-session", "og-add-seat", "og-change-comms-substrate",
-    "og-adopt", "og-create", "og-snapshot", "og-closeout", "og-add-position"
+    "og-close-session", "og-add-seat", "og-change-comms-substrate"
 )
 foreach ($skill in $skills) {
     $src = Join-Path $skillsSource $skill
