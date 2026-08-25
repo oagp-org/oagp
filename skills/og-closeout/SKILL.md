@@ -1,48 +1,35 @@
 ---
 name: og-closeout
 description: |
-  Use this skill at the end of a working session in an OG (Open
-  Governance Framework) org. It drafts a closeout memo capturing what the
-  session drafted/decided/left open, then prompts the Product Owner to
-  save the session transcript using the canonical position-tag
-  convention. You do not save the transcript yourself.
+  RETIRED NAME -- redirects to /og-close-session.
 
-  Activate when the user says any of: "close out", "wrap up", "end of
-  session", "let's close this session", or at a natural session end.
+  This card was renamed in skill suite v2 (ratified 2026-08-24). The stub is kept
+  so the old name keeps working for orgs and records that reference it; it carries
+  no content of its own.
 
-  Companion: /og-orient opens a session; /og-closeout ends it.
+  Activate only when the user types /og-closeout directly. Prefer /og-close-session.
+disable-model-invocation: true
 ---
 
-# /og-closeout
+# /og-closeout — retired, use `/og-close-session`
 
-You are closing out a working session in an OG org. Two things: (1) draft a closeout memo; (2) prompt the PO to save the transcript. You do not save the transcript yourself.
+**This name is retired.** The card now lives at **`/og-close-session`**.
 
-## Phase 1 — Draft the closeout memo
-File at `memos/<YYYY-MM-DD>-<HHMM>--<seat>--<seat>--<short-summary>.{openthing,body.md}`. `from` and `to` both name the seat you occupied (institutional capture for that seat's history — your replacements read it on their next `/og-orient`). If unattached (no seat), use `unattached-ai` and note it in `metadata.scope_check`.
+Renamed to name its object. The card closes a *session*; the seat persists.
 
-**Content:** one-line subject; body covering what was drafted (artifacts + paths), decided (flag "awaiting Director merge-ratification"), in flight, and open; `action_required` (usually `false`); `metadata.drafted_by_session`, `scope_check`, and 2–3 `applies_principles`. Match the org's tone: terse, evidence-led, no editorial polish, no celebration. The memo's value is durable context for the next incumbent, not narrative for the PO.
+## What to do
 
-## Phase 2 — Prompt the transcript save
-Surface the canonical path in plaintext for the PO to copy:
-`transcripts/<seat>/<YYYY-MM-DD>-<HHMM>--<seat>--<short-description>.{openthing,body.md}`
+Invoke **`/og-close-session`** and follow it. Everything this name used to do is there, unchanged or improved.
 
-Canonical `<seat>` value:
+If the user typed `/og-closeout`, say plainly that the name changed and that you are running `/og-close-session` instead — do not redirect silently. An org whose records cite the old name should learn that it moved.
 
-| Session type | `<seat>` |
-|---|---|
-| Staffed-seat working session | the seat id (e.g. `og-strategist`) |
-| Founding session (org doesn't exist yet; AI is the helper) | `<orgname>-adopt-helper` or `<orgname>-create-helper` |
-| Unattended / exploratory | `unattached-ai` (or omit) |
+## Why this stub exists at all
 
-Then stand by — the save is a runtime-dependent PO action (Claude Code: a transcript-export tool; web runtimes: download/export). You surface the path; the runtime owns the conversation state, so you cannot export it yourself.
+Claude Code has no alias mechanism for personal or project skills: the command name comes from the **directory name**, and frontmatter `name` is only a display label. A symlink does not help either — Claude Code loads a shared target once. So an alias has to be a real directory with a real `SKILL.md`. This is that, and nothing more.
 
-## Discipline (load-bearing)
-1. **AI drafts; PO ratifies** — no auto-commit. 2. **Institutional, not narrative** — durable context for the seat's next incumbent. 3. **Position-tag identifies the seat, not the session** (`og-strategist`, not `og-strategist-2026-06-01`). 4. **Founding sessions are special-cased** (`<orgname>-adopt-helper` / `-create-helper`). 5. **You cannot save the transcript** — even with filesystem access; the runtime owns conversation state. 6. **Don't close out mid-task** — if substantive work is in flight, ask whether this is a real session-end or a checkpoint. 7. **Closeout is content, not approval** — filing it doesn't ratify in-flight work; drafts stay drafts; the Director still merges.
-
-## What this skill does NOT do
-Save the transcript; auto-commit the memo; write retrospectives/marketing; staff or vacate seats; summarize prior sessions (only this one); bundle multiple sessions.
+Retaining old names was a **condition of acceptance** of the rename ([decisions/proposal-og-skill-suite-v2.md](../../decisions/proposal-og-skill-suite-v2.md)), because the seven names are an API surface for every org OG has already founded, and their records cite them permanently under no-retro-rebrand.
 
 ## References
-- Companion: [/og-orient](../og-orient/SKILL.md) (opens the session) · [/og-snapshot](../og-snapshot/SKILL.md)
-- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/ogframework/og](https://github.com/ogframework/og)
-- Produces a `memodef:Memo`; prompts a `memodef:Transcript` save (transcripts are a memodef subtype).
+- Current card: [/og-close-session](../og-close-session/SKILL.md)
+- Decision: [decisions/proposal-og-skill-suite-v2.md](../../decisions/proposal-og-skill-suite-v2.md)
+- OG home: [ogframework.com](https://ogframework.com)

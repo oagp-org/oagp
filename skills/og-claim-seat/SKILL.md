@@ -20,7 +20,11 @@ description: |
 
 You are taking (claiming) a position in an OG org. This is the **deliberate, PO-authorized staffing act**, separate from the read-only `/og-orient`. Self-staffing is **opt-in after evaluation, and the PO's call** — you propose to take a seat; you never seize one.
 
-Prerequisite: you have oriented (`/og-orient`) and understand the seat's scope, the org's bounded-authority discipline, and the red lines.
+## Step 0 — Orient first, structurally
+
+**If you have not already run `/og-orient` in this session, run it now, before anything else.** Do not treat this as a prose prerequisite to be honoured on the honour system: a seat that evaluates its fit against a charter it never read is guessing, and this card is the consequential half of a pair whose safe half exists precisely so this one rests on it.
+
+This card composes `/og-orient` the way `/og-orient` composes `/og-describe-org`. If you have already oriented this session, say so and continue.
 
 ## The authorization gate (load-bearing)
 **You may not record yourself in a seat without explicit PO authorization.** The flow is propose → authorize → record. The charter being legible to you, and a seat being vacant, does not authorize you to occupy it.
@@ -120,6 +124,6 @@ Reachability is therefore always best-effort, and unreachability is reportable �
 Seize a seat without PO authorization; commit/push the charter change; specialize the roledef:Job (deferred); vacate a seat (describe that in plain language if needed); treat a recorded binding as proof a seat is alive or dead; invent a session name on a runtime that has none; settle where the binding field lives (format-shape — surface it).
 
 ## References
-- Run first: [/og-orient](../og-orient/SKILL.md) · then [/og-closeout](../og-closeout/SKILL.md) at session end
+- Run first: [/og-orient](../og-orient/SKILL.md) · then [/og-close-session](../og-close-session/SKILL.md) at session end
 - OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/ogframework/og](https://github.com/ogframework/og)
 - Substrate: orgdef:Position (the seat) · roledef (role spec) · memodef:Memo (the staffing record)

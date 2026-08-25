@@ -3,8 +3,9 @@
 # install-claude-code-skills.sh
 #
 # Installs the canonical OG (Open Governance Framework) skills
-# (/og-adopt, /og-create, /og-orient, /og-claim-seat, /og-closeout,
-# /og-snapshot, /og-add-position) into the current user's Claude Code
+# (/og-create-org, /og-orient, /og-claim-seat, /og-describe-org,
+# /og-close-session, /og-add-seat, /og-change-comms-substrate), plus
+# redirect stubs for the retired names, into the current user's Claude Code
 # skills directory via symlinks pointing at this clone of the OG repo.
 #
 # After install, `git pull` in this repo keeps your skills current --
@@ -31,7 +32,15 @@ fi
 
 mkdir -p "$skills_dest"
 
-skills=("og-adopt" "og-create" "og-orient" "og-claim-seat" "og-closeout" "og-snapshot" "og-add-position")
+# Seven canonical cards, plus five redirect stubs kept so retired names stay invocable.
+# Claude Code has no alias mechanism for personal/project skills -- the command name comes
+# from the DIRECTORY name, and frontmatter `name` is only a display label -- so an alias has
+# to be a real directory. The stubs route to the current card and carry no content.
+skills=(
+    "og-create-org" "og-orient" "og-claim-seat" "og-describe-org"
+    "og-close-session" "og-add-seat" "og-change-comms-substrate"
+    "og-adopt" "og-create" "og-snapshot" "og-closeout" "og-add-position"
+)
 for skill in "${skills[@]}"; do
     src="$skills_source/$skill"
     dst="$skills_dest/$skill"

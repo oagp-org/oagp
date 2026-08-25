@@ -1,51 +1,35 @@
 ---
 name: og-add-position
 description: |
-  Use this skill to add a new position (seat) to an OG (Open Governance
-  Framework) org's chart. It elicits the position's scope, drafts the
-  orgdef:Position, and PROPOSES it for Director ratification — adding a
-  position is a governance change, so it is propose-then-ratify, never a
-  unilateral edit.
+  RETIRED NAME -- redirects to /og-add-seat.
 
-  Activate when the user says any of: "add a position", "create a new
-  seat", "we need a <X> role", "add <X> to the org chart".
+  This card was renamed in skill suite v2 (ratified 2026-08-24). The stub is kept
+  so the old name keeps working for orgs and records that reference it; it carries
+  no content of its own.
 
-  Companion: /og-claim-seat (an AI peer takes a position once it exists);
-  /og-snapshot (see the current chart). Vacating or editing positions is
-  describable in plain language and has no dedicated skill.
+  Activate only when the user types /og-add-position directly. Prefer /og-add-seat.
+disable-model-invocation: true
 ---
 
-# /og-add-position
+# /og-add-position — retired, use `/og-add-seat`
 
-You are adding a new position to an OG org's chart. **Adding a position is a governance change** (it modifies the charter), so this is **propose-then-Director-ratify** — never a unilateral org-chart edit. Bounded authority applies: you draft + propose; the Director ratifies-by-merge.
+**This name is retired.** The card now lives at **`/og-add-seat`**.
 
-## Steps
+Renamed for vocabulary consistency. Charter pattern #2 is named *seat-vs-incumbent*, so the framework's own pattern vocabulary settled the noun. Formal substrate references remain `orgdef:Position`; the skill surface speaks the colloquial noun the org actually uses.
 
-### 1 — Elicit the position
-Ask the PO: position `id` + name; scope/responsibilities; staffed or vacant (default **vacant** — no auto-staffing); whether it references a roledef / `recommended_capabilities`; relationships (reports_to / directs / coordinates_with); and why the org needs it now. Mark anything ambiguous `[NEEDS PO INPUT]`.
+## What to do
 
-### 2 — Draft the orgdef:Position
-Compose the `orgdef:Position` item (id, name, status, description, optional roledef reference + `recommended_capabilities`, relationships) consistent with the existing charter's position shape. Embedded `roledef:Job` specialization is typically deferred — note it. **Do not edit the live charter yet** — draft the position (in a proposal artifact, or inline for review).
+Invoke **`/og-add-seat`** and follow it. Everything this name used to do is there, unchanged or improved.
 
-### 3 — Propose
-Present the drafted position to the PO. For a substantive seat, file a short proposal in `proposals/` and/or a memo so the addition has an audit trail. State it awaits Director ratification.
+If the user typed `/og-add-position`, say plainly that the name changed and that you are running `/og-add-seat` instead — do not redirect silently. An org whose records cite the old name should learn that it moved.
 
-### 4 — Ratify (PO/Director; you wait)
-The Director reviews, amends, ratifies. Do not add the position to the live charter without authorization.
+## Why this stub exists at all
 
-### 5 — Apply (on ratification)
-Add the position to `org/<orgname>-organization.opencatalog` `items[]`; update `relationships[]` if needed; bump the charter version + add a history entry per the org's convention. **Do not commit/push** — the Director ratifies-by-merge. Then report, and point at `/og-claim-seat` for staffing the new seat (a separate, also-authorized act).
+Claude Code has no alias mechanism for personal or project skills: the command name comes from the **directory name**, and frontmatter `name` is only a display label. A symlink does not help either — Claude Code loads a shared target once. So an alias has to be a real directory with a real `SKILL.md`. This is that, and nothing more.
 
-## Discipline (load-bearing)
-1. **Propose-then-ratify** — adding a position is a charter change; the Director ratifies. No unilateral org-chart edits.
-2. **Default vacant** — a new position gets a status, not an incumbent. Staffing is `/og-claim-seat`, separately.
-3. **Charter change is a draft** — drafted on ratification; the Director merges; no push from a bounded seat.
-4. **Format-shape stays with the substrate** — the `orgdef:Position` *shape* is orgdef's; you author position *content* within that shape, not new schema.
-
-## What this skill does NOT do
-Edit the charter without Director ratification; staff the new position (→ /og-claim-seat); commit/push; invent new orgdef fields (format-shape → coordinate with orgdef-strategist); vacate/rename positions (describe those in plain language).
+Retaining old names was a **condition of acceptance** of the rename ([decisions/proposal-og-skill-suite-v2.md](../../decisions/proposal-og-skill-suite-v2.md)), because the seven names are an API surface for every org OG has already founded, and their records cite them permanently under no-retro-rebrand.
 
 ## References
-- Companion: [/og-claim-seat](../og-claim-seat/SKILL.md) (staff a position) · [/og-snapshot](../og-snapshot/SKILL.md) (see the chart)
-- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/ogframework/og](https://github.com/ogframework/og)
-- Substrate: orgdef:Position · roledef (role spec + recommended_capabilities)
+- Current card: [/og-add-seat](../og-add-seat/SKILL.md)
+- Decision: [decisions/proposal-og-skill-suite-v2.md](../../decisions/proposal-og-skill-suite-v2.md)
+- OG home: [ogframework.com](https://ogframework.com)

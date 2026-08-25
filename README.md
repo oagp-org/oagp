@@ -21,7 +21,7 @@ og/  (GitHub repo: github.com/ogframework/og)
 ├── proposals/                      ← draft proposals
 ├── decisions/                      ← ratified strategist decisions
 ├── transcripts/                    ← per-seat reasoning records
-├── skills/                         ← canonical OG skills (og-adopt, og-create, og-orient, og-claim-seat, og-closeout, og-snapshot, og-add-position)
+├── skills/                         ← canonical OG cards (og-create-org, og-orient, og-claim-seat, og-describe-org, og-close-session, og-add-seat, og-change-comms-substrate) + redirect stubs for retired names
 ├── install/                        ← cross-runtime install scripts
 ├── agent-sdk/                      ← agent-runtime bindings (roledefs → AgentDefinitions)
 ├── channels/                       ← seat-inbox-notification ("doorbell") PoC: transport-neutral core + adapter
@@ -43,22 +43,26 @@ OG recommends catdef-family substrate for AI-peer-alignment, but does not requir
 
 ## Canonical skills
 
-Seven `og-` skills in three categories. The suite is the discoverable menu of canonical operations — its presence advertises what OG supports.
+Seven `og-` cards in three categories. The suite is the discoverable menu of canonical operations — its presence advertises what OG supports. Names follow one rule: **verb + object, where the object is named whenever it isn't obvious from the verb.**
 
 **Genesis (one-shot per org):**
-- **`/og-adopt`** — convert an existing project into OG shape → [skills/og-adopt/SKILL.md](skills/og-adopt/SKILL.md)
-- **`/og-create`** — create a new OG-shaped org from scratch (folder-only by default, git optional) → [skills/og-create/SKILL.md](skills/og-create/SKILL.md)
+- **`/og-create-org`** — bring a project into OG shape, existing or brand new. Phase 1 branches on whether a project already exists; everything after is identical → [skills/og-create-org/SKILL.md](skills/og-create-org/SKILL.md)
 
 **Session (per session):**
-- **`/og-orient`** — read-only come-up-to-speed on the org; emits the snapshot → [skills/og-orient/SKILL.md](skills/og-orient/SKILL.md)
-- **`/og-claim-seat`** — take a position (PO-authorized staffing act) → [skills/og-claim-seat/SKILL.md](skills/og-claim-seat/SKILL.md)
-- **`/og-closeout`** — wrap a session: closeout memo + transcript-save prompt → [skills/og-closeout/SKILL.md](skills/og-closeout/SKILL.md)
+- **`/og-orient`** — read-only come-up-to-speed; ends by emitting the current-state view → [skills/og-orient/SKILL.md](skills/og-orient/SKILL.md)
+- **`/og-claim-seat`** — take a position (PO-authorized staffing act); composes `/og-orient` → [skills/og-claim-seat/SKILL.md](skills/og-claim-seat/SKILL.md)
+- **`/og-close-session`** — wrap a session: closeout memo, discharge what you completed, transcript-save prompt → [skills/og-close-session/SKILL.md](skills/og-close-session/SKILL.md)
 
 **Operations (ongoing):**
-- **`/og-snapshot`** — current-state view: identity + staffing + recent-activity digest (screen, optional MD) → [skills/og-snapshot/SKILL.md](skills/og-snapshot/SKILL.md)
-- **`/og-add-position`** — propose a new position (Director-ratified org-chart change) → [skills/og-add-position/SKILL.md](skills/og-add-position/SKILL.md)
+- **`/og-describe-org`** — current-state view: identity + staffing + open items (screen, optional MD) → [skills/og-describe-org/SKILL.md](skills/og-describe-org/SKILL.md)
+- **`/og-add-seat`** — propose a new seat (Director-ratified org-chart change) → [skills/og-add-seat/SKILL.md](skills/og-add-seat/SKILL.md)
+- **`/og-change-comms-substrate`** — change where inter-seat communication is recorded. Rare, charter-altering, deliberately unmissable → [skills/og-change-comms-substrate/SKILL.md](skills/og-change-comms-substrate/SKILL.md)
 
-Skill architecture ratified 2026-06-01 ([decisions/proposal-og-skill-architecture-v1.md](decisions/proposal-og-skill-architecture-v1.md)); rebrand from the prior `oagp-*` adoption/session set ([decisions/proposal-og-rebrand-open-governance-framework.md](decisions/proposal-og-rebrand-open-governance-framework.md)). When canonical web hosting at [ogframework.com](https://ogframework.com) is live, canonical content also serves there.
+**The cards compose:** `/og-describe-org` ← `/og-orient` ← `/og-claim-seat`. Each is independently runnable; each calls down rather than restating. The read-only half of a pair exists so the consequential half can rest on it.
+
+**Retired names still work.** `/og-adopt`, `/og-create`, `/og-snapshot`, `/og-closeout` and `/og-add-position` are kept as **redirect stubs** — they tell you the name changed and route you to the current card. Claude Code has no alias mechanism for personal or project skills (the command name comes from the *directory* name; frontmatter `name` is only a display label), so an alias has to be a real directory. Retaining them was a condition of accepting the renames: the names are an API surface for every org OG has already founded.
+
+Skill suite v2 ratified 2026-08-24 ([decisions/proposal-og-skill-suite-v2.md](decisions/proposal-og-skill-suite-v2.md)), superseding the v1 architecture ([decisions/proposal-og-skill-architecture-v1.md](decisions/proposal-og-skill-architecture-v1.md)). When canonical web hosting at [ogframework.com](https://ogframework.com) is live, canonical content also serves there.
 
 ## Quick install (Claude Code)
 

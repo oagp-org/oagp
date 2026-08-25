@@ -19,7 +19,7 @@ When entering an OG session, read in this order:
 5. **[proposals/](proposals/) + [decisions/](decisions/)** — ratified commitments
 6. **The specific item being worked on**
 
-Or just run **`/og-describe-org`** for the current-state view, or **`/og-orient`** to come up to speed read-only. (Ratified 2026-08-24; until the rename ships these are still installed as `/og-snapshot` and `/og-orient`. If a card is missing, the read order above is the whole procedure — it does not depend on any skill being installed.)
+Or just run **`/og-describe-org`** for the current-state view, or **`/og-orient`** to come up to speed read-only. Retired names (`/og-snapshot`, `/og-closeout`, `/og-add-position`, `/og-adopt`, `/og-create`) still resolve — they are redirect stubs that name their replacement. **If a card is missing entirely, the read order above is the whole procedure** — it does not depend on any skill being installed. *(Renaming a card breaks its installed symlink until `install/install-claude-code-skills.{ps1,sh}` is re-run.)*
 
 ## The framework: OG
 
@@ -108,10 +108,10 @@ Current as of the OAGP→OG rebrand (v0.2.0/v0.2.1, 2026-06-01). "On main" = dra
 ### On main (ratified-by-merge)
 
 - **OAGP → OG rebrand** (2026-06-01) — name → "OG — Open Governance Framework"; `ogframework.com`; GitHub `ogframework/og`; seven `og-` skills; seat identifiers → `og-strategist`/`og-implementer` @ogframework.com; charter v0.2.0 (masthead) + v0.2.1 (deep prose + identity/infra). Decisions: [proposal-og-rebrand-open-governance-framework.md](decisions/proposal-og-rebrand-open-governance-framework.md), [proposal-og-skill-architecture-v1.md](decisions/proposal-og-skill-architecture-v1.md). Scope kept agentic; human-org broadening is a forward vision.
-- ~~Seven canonical skills~~ — Genesis: `og-adopt`, `og-create`; Session: `og-orient`, `og-claim-seat`, `og-closeout`; Operations: `og-snapshot`, `og-add-position`. **Superseded by skill suite v2** (above); these are the names still *installed* until the renames ship. (They in turn superseded the prior `oagp-bootstrap`/`init`/`onboard` set.)
+- **Skill suite v2 BUILT** (2026-08-25) — seven cards live in [skills/](skills/): `og-create-org` (merges the former adopt+create), `og-orient`, `og-claim-seat`, `og-describe-org`, `og-close-session`, `og-add-seat`, `og-change-comms-substrate`. Five retired names (`og-adopt`, `og-create`, `og-snapshot`, `og-closeout`, `og-add-position`) are kept as **redirect stubs** — Claude Code has no alias mechanism for personal/project skills (command name = directory name; frontmatter `name` is display-only; a shared symlink target loads once), so an alias must be a real directory. Seams composed: `og-describe-org` ← `og-orient` ← `og-claim-seat`. Cards read the org's *ratified substrate*, not a hardcoded `memos/`, and enumerate what is OPEN rather than ever-flagged.
 - **Skill distribution v0.1** (residence in [skills/](skills/) + Claude Code install scripts) and **v0.2** (family-level MCP at ogframework.com/mcp + primer.md fallback)
 - **GitHub consolidation** — roledef/orgdef/memodef + the site repo under the org (now `ogframework`); catdef standalone
-- **Transcript-position-tagging convention** — encoded in [skills/og-closeout/SKILL.md](skills/og-closeout/SKILL.md) Phase 2 (staffed-seat → seat id; founding → `<orgname>-adopt-helper`/`-create-helper`; unattached → `unattached-ai`)
+- **Transcript-position-tagging convention** — encoded in [skills/og-close-session/SKILL.md](skills/og-close-session/SKILL.md) Phase 2 (staffed-seat → seat id; founding → `<orgname>-adopt-helper`/`-create-helper`; unattached → `unattached-ai`)
 - **bind()/agent-sdk v0.1** — graduated to [agent-sdk/](agent-sdk/) (Python, 36 tests) + ratified (interactive scope)
 - **agent-sdk v0.2 autonomous-dispatch** — three-tier bounded-authority model (propose-only by construction / explicit+audited Director elevation / non-delegable dispatch); governance core built (94 tests); live WorkflowsBackend; propose-only §8 demo validated; governance addendum ratified launcher-per-dispatch + Tier-1-only-until-Tier-2-launcher-gated
 - **Nine canonical patterns** in `recommended_patterns.general` (charter): bounded authority; seat-vs-incumbent; data-vs-pattern layering; org-state-fork-for-time-travel; substrate-is-sufficient-agent-context; bounded autonomous dispatch; org-governance-layer-above-runtime; promotion-follows-adoption; **seat-inbox-notification** (promoted 2026-08-24)
@@ -137,14 +137,9 @@ Current as of the OAGP→OG rebrand (v0.2.0/v0.2.1, 2026-06-01). "On main" = dra
 - **roledef URL-resolution contract** (memos/2026-05-25-0001) — awaits roledef-strategist; gates fail-closed roledef resolution
 - **v0.3 Claude Code plugin packaging** — scheduled last per cross-vendor red line
 - **Site + primer rebrand** — `ogframework.com` content (the moved site repo); part of the rebrand follow-on
-- **Build queue from the 2026-08-24 ratifications** (in order):
-  1. **Alias mechanism research** — gates the four renames; good cold-start task for a resuming implementer seat.
-  2. **Skill suite v2 structural work** (not gated): merge `og-adopt` into `og-create-org` with a branching Phase 1; compose the seams; write the operating discipline **inline** into the generated `CLAUDE.md`; stop creating an empty `skills/`.
-  3. **`og-claim-seat`**: record the seat's `.orgdef` address + current session binding; report reachability (`/list-agents`). A stale binding MUST fail visibly, never be retried against a guessed name.
-  4. **`og-create-org`**: elicit and record the communication substrate; `og-orient` / `og-describe-org` read the ratified substrate rather than hardcoding `memos/`.
-  5. **Author `og-change-comms-substrate`**; then run it on this org to formalize `memos/` primary + OGF Jira secondary.
-  6. **Retire the bespoke notification implementation from the forward surface** (README, docs, canonical guidance). Records, commits and memo trail untouched.
-  7. **Sync** installers, README, docs to the ratified names — *after* step 1.
+- ~~Build queue from the 2026-08-24 ratifications~~ — **steps 1–7 COMPLETE 2026-08-25.** Step 1 resolved with a finding: Claude Code has no alias mechanism, so retired names are redirect stubs. Steps 2–7 built in one pass: merge, renames, composed seams, substrate-aware reads, discipline written inline into the generated `CLAUDE.md`, empty `skills/` no longer created, `og-change-comms-substrate` authored, installers and README synced.
+- **Re-run the installer** — renaming a card breaks its installed symlink. `install/install-claude-code-skills.{ps1,sh}` now covers seven cards plus five stubs.
+- **Open (implementer): run `og-change-comms-substrate` on this org** to formalise `memos/` primary + OGF Jira secondary, per the v0.3.0 build directive item 4.
 
 ### Deferred / Director-scoped (surfaced, not strategist calls)
 

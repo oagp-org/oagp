@@ -1,61 +1,35 @@
 ---
 name: og-adopt
 description: |
-  Use this skill when a Product Owner wants to convert an EXISTING
-  project into OG (Open Governance Framework) shape — surveying the
-  project, proposing an org charter as a ratifiable artifact, and
-  instantiating the substrate (charter, CLAUDE.md, memos/, proposals/,
-  decisions/, transcripts/, skills/) once the PO approves.
+  RETIRED NAME -- redirects to /og-create-org.
 
-  Activate when the user says any of: "make this OG-shaped", "adopt OG",
-  "add OG governance to this project", "convert this to Open Governance",
-  or asks about OG adoption for an existing codebase.
+  This card was renamed in skill suite v2 (ratified 2026-08-24). The stub is kept
+  so the old name keeps working for orgs and records that reference it; it carries
+  no content of its own.
 
-  Companion: /og-create (new org from scratch — the create-side of
-  founding). /og-adopt is the convert-existing-project side. After an
-  org exists, /og-orient brings an AI peer up to speed and /og-claim-seat
-  lets one take a position.
+  Activate only when the user types /og-adopt directly. Prefer /og-create-org.
+disable-model-invocation: true
 ---
 
-# /og-adopt
+# /og-adopt — retired, use `/og-create-org`
 
-You are converting an existing project into OG (Open Governance Framework) shape. Operate with **propose-don't-impose** discipline: the human Product Owner is the only one who can decide the org's identity. Your job is to make adoption cheap, not to make the decision.
+**This name is retired.** The card now lives at **`/og-create-org`**.
 
-OG reference: [ogframework.com](https://ogframework.com). Empirical reference org: [github.com/ogframework/og](https://github.com/ogframework/og).
+Converting an existing project into OG shape is now one half of a single genesis card. `/og-create-org` branches on whether a project already exists: if it does, it surveys it AND interviews the PO for what it cannot infer -- which is more than `/og-adopt` did, since that card never instructed the seat to interview at all.
 
-## Five phases
+## What to do
 
-### 1 — Survey (read-only)
-Read README, docs, CLAUDE.md, recent commits/PRs, package config, any existing `org/`/`memos/`. Form a working model: mission, scope, implicit positions (who works on this and how), implicit values + red lines (from CI rules, review patterns, enforced invariants), and what "shipped" means. **Create nothing yet.**
+Invoke **`/og-create-org`** and follow it. Everything this name used to do is there, unchanged or improved.
 
-### 2 — Propose
-Draft an `orgdef:Organization` charter at `proposals/og-adopt-<YYYY-MM-DD>.md`. Mark every section `[HIGH CONFIDENCE]` / `[INFERRED]` / `[NEEDS PO INPUT]`. Propose positions with staffed/vacant status but **do not auto-staff anyone**. Propose values + red lines defensively (PO can cut). Include a "What I couldn't determine" list. Then **stop** and report: where the draft is, the key unknowns, a 3–5 bullet summary of what you observed.
+If the user typed `/og-adopt`, say plainly that the name changed and that you are running `/og-create-org` instead — do not redirect silently. An org whose records cite the old name should learn that it moved.
 
-### 3 — Ratify (PO does this; you wait)
-The PO corrects, amends, ratifies. Revise the proposal in place. Do **not** proceed without an explicit "instantiate this."
+## Why this stub exists at all
 
-### 4 — Instantiate (only on ratification)
-Create: `org/<orgname>-organization.opencatalog` (ratified charter, confidence markers stripped); substrate folders `memos/ proposals/ decisions/ transcripts/` (with `.gitkeep`); `CLAUDE.md` (augment if it exists — do not overwrite); and the founding memo at `memos/<date>-<HHMM>--product-owner--<orgname>-strategist--og-adopt-ratified.{openthing,body.md}` (documents what was proposed/ratified + points future participants at `/og-orient`). Git is optional — a folder is valid OG shape; if the PO wants versioning, `git init` + commit, and **push only with explicit PO authorization**.
+Claude Code has no alias mechanism for personal or project skills: the command name comes from the **directory name**, and frontmatter `name` is only a display label. A symlink does not help either — Claude Code loads a shared target once. So an alias has to be a real directory with a real `SKILL.md`. This is that, and nothing more.
 
-### 5 — Hand-off
-Report: OG shape instantiated (+ commit SHA if git). To bring an AI peer up to speed: `/og-orient`. To staff a position: `/og-claim-seat` (PO-authorized). Charter is at `org/<orgname>-organization.opencatalog`.
-
-## Discipline (load-bearing)
-1. **Propose-don't-impose** — never instantiate or commit without explicit PO ratification.
-2. **Humility about inference** — Phase 1 produces inferences; mark them.
-3. **Preserve, don't overwrite** — augment existing CLAUDE.md / respect existing OG shape.
-4. **Stop at each phase boundary** — report and wait; never bundle phases.
-5. **No auto-staffing** — positions get a status, not an incumbent. Staffing is `/og-claim-seat`, PO's call.
-6. **Push is PO-authorized.**
-7. **Test on a fork before live** when validating this skill against a real repo.
-
-## Transcript tagging
-If the session is captured as a transcript, tag it `<orgname>-adopt-helper` (a one-shot founding role, not a permanent seat). After hand-off, re-tag against the actual staffed position if you continue.
-
-## What this skill does NOT do
-Staff positions; commit/push without authorization; police the project's content; migrate data (only organizational shape); assume project size.
+Retaining old names was a **condition of acceptance** of the rename ([decisions/proposal-og-skill-suite-v2.md](../../decisions/proposal-og-skill-suite-v2.md)), because the seven names are an API surface for every org OG has already founded, and their records cite them permanently under no-retro-rebrand.
 
 ## References
-- Companion: [/og-create](../og-create/SKILL.md) (new org from scratch) · [/og-orient](../og-orient/SKILL.md) · [/og-claim-seat](../og-claim-seat/SKILL.md)
-- OG home: [ogframework.com](https://ogframework.com) · Empirical org: [github.com/ogframework/og](https://github.com/ogframework/og)
-- Substrate stack: catdef → roledef → orgdef → memodef (transcripts are a memodef subtype)
+- Current card: [/og-create-org](../og-create-org/SKILL.md)
+- Decision: [decisions/proposal-og-skill-suite-v2.md](../../decisions/proposal-og-skill-suite-v2.md)
+- OG home: [ogframework.com](https://ogframework.com)
