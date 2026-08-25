@@ -1,0 +1,36 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-implementer",
+  "to": "oagp-implementer",
+
+  "subject": "Session closeout: oagp-implementer seat continued; agent-sdk v0.2 built end-to-end (governance core -> live WorkflowsBackend + propose-only demo -> launcher-per-dispatch + Tier-2 package-absence gate); strategist 1800 build-directive complete (commit 7725558); 105 tests pass; only open piece is the operational fresh-session ClaudeCliLauncher run to fully close §8; roledef URL-resolution contract and memodef bind-event subtype unchanged on other seats",
+
+  "sent": "2026-05-29T20:00:00-04:00",
+  "action_required": false,
+
+  "body": "Institutional capture for the oagp-implementer seat. This session resumed the seat under PO direction (the v0.1.8 charter reconciliation had already folded the prior 2026-05-28-1000 bookkeeping). The substantive arc was v0.2 of the agent-sdk, executed in three ratified increments: (1) governance core (commit 6628404; run_seat + three-tier model + bind-event memos + fail-closed resolution + StubBackend; 82+1 skip); (2) live WorkflowsBackend + propose-only §8 demo (commit 3644bb6; agentType-based script generation; live demo dispatched a doc-reviewer that read the README and filed a 7-proposal review without editing the README; 94 tests; two empirical findings surfaced -- composition seam + Tier-3 env-marker gap + session-start rule); (3) launcher-per-dispatch + Tier-2 package-absence gate per the strategist's 2026-05-29-1800 ratification of those findings (commit 7725558; launch_seat always dispatches via agentType, Tier-2 refuses absent verify_package_absent, addendum §5 conformance tests added; 105 tests). Closeout memo 2026-05-29-1900 (action_required false) closed the 1800 directive. Status memos at 1500 and 1700 carry the in-session strategist coordination. Nothing is awaiting Director merge-ratification -- everything in scope was pushed under oagp-implementer authorship with the human Director as git committer. Open items are all routed: the §8 full structural close needs an operational fresh-session ClaudeCliLauncher(execute=True) run (CLI flag surface in build_command is best-effort and likely needs tuning to the installed claude CLI); roledef URL-resolution contract (memos/2026-05-25-0001) remains parked on roledef-strategist with no reply (interim fail-closed default holds); memodef bind-event subtype routed to memodef-strategist (memos/2026-05-29-1601). README quick-start nit the demo agent flagged (security-tester not in bundled example org) was fixed in commit 7725558. Next /og-orient session reads this memo first.",
+  "body_ref": "2026-05-29-2000--oagp-implementer--oagp-implementer--session-closeout-agent-sdk-v0.2-end-to-end-core-live-backend-launcher.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7 (1M context), oagp-implementer chair, s:/projects/oagp-org. Session 2026-05-29 (continued the seat across an /oagp-onboard and shipped v0.2 end-to-end).",
+    "scope_check": "Within oagp-implementer scope. Closeout memo is institutional capture for the seat the session occupied. from=to=oagp-implementer per the seat-vs-incumbent convention. No pattern-shape decisions claimed; all strategist-scope calls this session (launcher canonical; Tier-2 gating) were received from oagp-strategist via 1800 and executed per the ratified directive.",
+    "applies_principles": [
+      "seat-vs-incumbent -- memo is for the seat, not this session; next /og-orient reads it on resume",
+      "institutional-not-narrative -- terse evidence-led capture (commits, memos, tests, gates), not retrospective",
+      "structural-not-prompt-level bounded authority -- this session's central artifact (launch_seat) makes the constraint the enforcement (agentType-only for autonomous; package-absence preflight for Tier-2)",
+      "closeout-is-content-not-approval -- filing this does NOT ratify the §8 full-structural close, which still needs a real fresh-session ClaudeCliLauncher run"
+    ],
+    "related_artifacts": [
+      "v0.2 commits: 6628404 (core), 3644bb6 (live backend + demo), 7725558 (launcher + Tier-2 gate)",
+      "Closeout commits: status memos 2026-05-29-1500, 1700, 1900",
+      "Decision: decisions/proposal-agent-sdk-v0.2-governance-addendum-autonomous-dispatch-constraints.md",
+      "Build-direction: memos/2026-05-29-1300; ratification: memos/2026-05-29-1800",
+      "Package: agent-sdk/ (v0.2.0; src/oagp_agent_sdk/{bind,run_seat,authority,guard,bind_event,backends,launch}.py + tests/* + examples/*); 105 tests pass",
+      "Demo evidence: agent-sdk/examples/demo-output/{review-proposal.md, *.workflow.js, bind-event-doc-reviewer.*}",
+      "Parked on other seats: memos/2026-05-25-0001 (roledef), memos/2026-05-29-1601 (memodef bind-event subtype)"
+    ]
+  }
+}

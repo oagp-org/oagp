@@ -9,3 +9,6 @@ __pycache__/
 .env.local
 node_modules/
 .scratch/
+
+# local dev/tooling detritus
+.wrangler/
