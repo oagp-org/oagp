@@ -40,11 +40,17 @@ foreach ($skill in $skills) {
     }
 
     if (Test-Path $dst) {
-        # $dst is normally the junction that a previous run created below. Delete the LINK, never
-        # what it points at: Remove-Item -Recurse on a reparse point has historically traversed it
-        # on some Windows PowerShell 5.1 builds, which would delete the user's clone of this repo
-        # -- i.e. their skill sources. Branching on the ReparsePoint attribute removes that
-        # build-dependent behaviour by construction, so the outcome no longer varies by host.
+        # $dst is normally the junction a previous run created below, and the operation we mean is
+        # "remove the link". Recursion is not part of that meaning -- a link is not a tree. So
+        # branch on the ReparsePoint attribute and delete the link itself; only a real directory
+        # gets a recursive delete. The code then says what it means.
+        #
+        # A secondary benefit: this also removes a build-dependent outcome. Remove-Item -Recurse
+        # on a reparse point was reported to traverse it on older Windows PowerShell 5.1 builds,
+        # which would delete the junction's target -- the user's clone of this repo, i.e. their
+        # skill sources. That was NOT reproduced here on 5.1.26100.9168 (tested three ways: this
+        # line against a junction, a recursive delete of a parent containing one, and against a
+        # directory symlink). The branch stands on the intent argument above, not on that report.
         $existing = Get-Item -LiteralPath $dst -Force
         if ($existing.Attributes -band [IO.FileAttributes]::ReparsePoint) {
             Write-Host "Removing existing link: $dst"
